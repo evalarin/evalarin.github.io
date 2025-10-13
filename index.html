@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Title and Author Info -->
   <title>HTML; Where it Started and Where it is Going</title>
   <p>Elena Valarino - Kennesaw State University</p>
   <p>IT 3203</p>
   <style>
+/* Basic Styles */
     body {
       background: white;
       color: black;
@@ -61,6 +63,7 @@
   </style>
 </head>
 <body>
+<!-- Header Again but with the table of content buttons -->
   <header>
     <h1>HTML, Where it Started and Where it is Going</h1>
     <nav>
@@ -72,13 +75,13 @@
       <button onclick="showLetter('About')">About</button>
     </nav>
   </header>
-
+<!-- What you see on the main page -->
   <main id="content">
     <h2 id="main-title">Welcome to my Website!</h2>
     <p>Click the tabs to explore!!!</p>
     <img src="https://img.freepik.com/free-vector/pink-heart-flat-style_78370-6266.jpg?semt=ais_hybrid&w=740&q=80" alt="Pink Heart" style="margin-top: 20px; border: 2px solid pink;">
   </main>
-
+<!-- content on each different tab -->
   <script>
     function showLetter(page) {
       const content = document.getElementById('content');
@@ -191,12 +194,16 @@
       }else if(page === 'Key Concepts') {
         content.innerHTML = `<h2 id="main-title">Key Concepts</h2><p>Content for Key Concepts here.</p>`;
       }else if(page === 'About') {
-        content.innerHTML = `<h2 id="main-title">About</h2><p>Elena Valarino, Undergraduate Student at Kennesaw State University going for a Degree in IT with a concentration in Enterprise Systems and a minor in Dance</p>`;
+        content.innerHTML = `
+		<h2 id="main-title">About</h2>
+		<p>Elena Valarino, Undergraduate Student at Kennesaw State University going for a Degree in IT with a concentration in Enterprise Systems and a minor in Dance</p>
+		<p>Please note this is for a class project <a href="https://ksuweb.github.io/IT3203/">Link to Class GitHub Here</a></p>`;
       }
     }
   </script>
 </body>
 </html>
+
 
 
 
