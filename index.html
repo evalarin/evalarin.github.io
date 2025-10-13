@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -34,15 +34,14 @@
 </head>
 <body>
   <header>
-    <h1>HTML; Where it Started and Where it is Going</h1>
-    <p>Here is my title. Here is the body.</p>
+    <h1>HTML, Where it Started and Where it is Going</h1>
     <nav>
-      <button onclick="showLetter('A')">A</button>
-      <button onclick="showLetter('B')">B</button>
-      <button onclick="showLetter('C')">C</button>
-      <button onclick="showLetter('D')">D</button>
-      <button onclick="showLetter('E')">E</button>
-      <button onclick="showLetter('F')">F</button>
+      <button onclick="showLetter('Homepage')">A</button>
+      <button onclick="showLetter('Topic 1')">B</button>
+      <button onclick="showLetter('Topic 2')">C</button>
+      <button onclick="showLetter('References & Resources')">D</button>
+      <button onclick="showLetter('Key Concepts')">E</button>
+      <button onclick="showLetter('About')">F</button>
     </nav>
   </header>
 
@@ -54,8 +53,16 @@
 
       if (letter === 'A') {
         content.innerHTML = `
-          <h2>Homepage</h2>
-          <p>The world wide web exists and functions because of the evolution and development of the HTML language. It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
+          <h2 style="font-size:36px;">Homepage</h2>
+          <p style="
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: right;
+            text-indent: 50px;
+            ">The world wide web exists and functions because of the evolution and development of the HTML language. 
+            It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
+            it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
           `;
       } else {
         content.textContent = letter;
@@ -64,5 +71,6 @@
   </script>
 </body>
 </html>
+
 
 
