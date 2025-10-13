@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Site</title>
+  <title>HTML; Where it Started and Where it is Going</title>
   <style>
     body {
       background: white;
@@ -34,7 +34,7 @@
 </head>
 <body>
   <header>
-    <h1>My Simple Site</h1>
+    <h1>HTML; Where it Started and Where it is Going</h1>
     <p>Here is my title. Here is the body.</p>
     <nav>
       <button onclick="showLetter('A')">A</button>
@@ -50,8 +50,18 @@
 
   <script>
     function showLetter(letter) {
-      document.getElementById('content').textContent = letter;
+      const content = document.getElementById('content');
+
+      if (letter === 'A') {
+        content.innerHTML =
+          <h2>Homepage</h2>
+          <p>The world wide web exists and functions because of the evolution and development of the HTML language. It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
+          ';
+      } else {
+        content.textContent = letter;
+      }
     }
   </script>
 </body>
 </html>
+
