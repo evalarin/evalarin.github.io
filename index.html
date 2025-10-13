@@ -4,6 +4,8 @@ e<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML; Where it Started and Where it is Going</title>
+  <p>Elena Valarino - Kennesaw State University</p>
+  <p>IT 3203</p>
   <style>
     body {
       background: white;
@@ -37,7 +39,7 @@ e<!DOCTYPE html>
       font-size: 18px;
       max-width: 800px;
       margin: 0 auto;
-      text-align: right;
+      text-align: left;
       text-indent: 50px;
     }
   </style>
@@ -63,16 +65,18 @@ e<!DOCTYPE html>
 
       if (page === 'Homepage') {
         content.innerHTML = `
-          <h2 style="font-size:36px;">Homepage</h2>
-          <p style="
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: right;
-            text-indent: 50px;
-            ">The world wide web exists and functions because of the evolution and development of the HTML language. 
+          <h2>Homepage</h2>
+          <p style=font-weight: bold;">Intro</p>
+          <p>The world wide web exists and functions because of the evolution and development of the HTML language. 
             It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
             it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
+          <p style=font-weight: bold;">Key Terms</p>
+          <p>Key Term 1</p>
+          <p>Key Term 2</p>
+          <p>Key Term 3</p>
+          <p>Key Term 4</p>
+          <p style=font-weight: bold;">Table of Contents</p>
+          <p><button onclick="showLetter('Topic 1')">Topic 1</button></p>
           `;
       } else if(page === 'Topic 1') {
         content.innerHTML = "<h2>Topic 1</h2><p>Content for Topic 1 here.</P>";
@@ -89,6 +93,7 @@ e<!DOCTYPE html>
   </script>
 </body>
 </html>
+
 
 
 
