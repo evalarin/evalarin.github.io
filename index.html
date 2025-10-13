@@ -32,7 +32,7 @@
       font-size: 50px;
       margin-top: 50px;
       display: flex;
-      flex-direciton: column;
+      flex-direction: column;
       align-items: center;
     }
     main h2 {
@@ -51,6 +51,8 @@
     #main-title{
       font-family:'Arial', serif;
       color: hotpink;
+		margin: 0 auto;
+		text-align: center;
     }
     a:hover{
       color: pink;
@@ -74,7 +76,7 @@
   <main id="content">
     <h2 id="main-title">Welcome to my Website!</h2>
     <p>Click the tabs to explore!!!</p>
-    <img src="https://https://img.freepik.com/free-vector/pink-heart-flat-style_78370-6266.jpg?semt=ais_hybrid&w=740&q=80" alt="Pink Heart" style="margin-top: 20px; border: 2px solid pink;">
+    <img src="https://img.freepik.com/free-vector/pink-heart-flat-style_78370-6266.jpg?semt=ais_hybrid&w=740&q=80" alt="Pink Heart" style="margin-top: 20px; border: 2px solid pink;">
   </main>
 
   <script>
@@ -156,7 +158,7 @@
         Firefox support HTML. It is such an incredibly dominant source in this world of technology with no plans to be changed and with all the plans to continue growth and change with the
         times. As of the day this essay is being written, 95% of websites are now using HTML5 and 97.1% are using HTML, W3techs breaks down the usage on a day by day basis proving just how
         important these languages are. It even shows new websites that have implemented HTML5 recently. With all of these current tools, web technologies are continuing to evolve, so HTML
-        needs to adapt to meet new demands leading to future developments.</p>;`
+        needs to adapt to meet new demands leading to future developments.</p>`;
       }else if(page === 'Future HTML') {
         content.innerHTML = `
         <h2 id="main-title">Future HTML</h2>
@@ -168,33 +170,34 @@
         new HTML standards called WHATWG, which stands for Web Hypertext Application Technology Working Group. In short this group helps with developing new ideas and help get them developed
         into actual standards for the community. As HTML continues to grow one of the bigger negatives that could occur could be the more difficult ability for backwards compatibility on
         devices that haven’t been upgraded. So while the future of HTML is bright and ever growing, developers who use HTML still need to keep in mind the majority of users and if the new
-        HTML coding can be accessed on older devices still majorly in use.</p>;`
+        HTML coding can be accessed on older devices still majorly in use.</p>`;
       }else if(page === 'References & Resources') {
         content.innerHTML = `
         <h2 id="main-title">References & Resources</h2>
         <p style="font-weight: bold;">Sources</p>
         <p>
-        <a href="https://www.w3schools.com/html/html_intro.asp"</a>
-        <a href="w3schools.in/html/history/"</a>
-        <a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6"</a>
-        <a href="https://frontendmasters.com/blog/bone-up-html-2025/"</a>
-        <a href="https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/"</a>
-        <a href="https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai"</a> 
-        <a href="https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest"</a>
-        <a href="https://www.w3.org/People/Bos/DesignGuide/compatibility.html"</a>
-        <a href="https://firstsiteguide.com/html-stats/"</a>
-        <a href="https://www.oyova.com/blog/html5-and-your-content-what-to-do/"</a>
-        <a href="https://w3techs.com/technologies/details/ml-html5"</a>
-        </p>;`
+        <a href="https://www.w3schools.com/html/html_intro.asp">https://www.w3schools.com/html/html_intro.asp</a>
+        <a href="w3schools.in/html/history/">w3schools.in/html/history/</a>
+        <a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6">https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6</a>
+        <a href="https://frontendmasters.com/blog/bone-up-html-2025/">https://frontendmasters.com/blog/bone-up-html-2025/</a>
+        <a href="https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/">https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/</a>
+        <a href="https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai">https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai</a> 
+        <a href="https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest">https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest</a>
+        <a href="https://www.w3.org/People/Bos/DesignGuide/compatibility.html">https://www.w3.org/People/Bos/DesignGuide/compatibility.html</a>
+        <a href="https://firstsiteguide.com/html-stats/">https://firstsiteguide.com/html-stats/</a>
+        <a href="https://www.oyova.com/blog/html5-and-your-content-what-to-do/">https://www.oyova.com/blog/html5-and-your-content-what-to-do/</a>
+        <a href="https://w3techs.com/technologies/details/ml-html5">https://w3techs.com/technologies/details/ml-html5</a>
+        </p>`
       }else if(page === 'Key Concepts') {
-        content.innerHTML = "<h2 id="main-title">Key Concepts</h2><p>Content for Key Concepts here.</p>";
+        content.innerHTML = `<h2 id="main-title">Key Concepts</h2><p>Content for Key Concepts here.</p>`;
       }else if(page === 'About') {
-        content.innerHTML = "<h2 id="main-title">About</h2><p>Elena Valarino, Undergraduate Student at Kennesaw State University going for a Degree in IT with a concentration in Enterprise Systems and a minor in Dance</p>";
+        content.innerHTML = `<h2 id="main-title">About</h2><p>Elena Valarino, Undergraduate Student at Kennesaw State University going for a Degree in IT with a concentration in Enterprise Systems and a minor in Dance</p>`;
       }
     }
   </script>
 </body>
 </html>
+
 
 
 
