@@ -40,7 +40,6 @@
       max-width: 800px;
       margin: 0 auto;
       text-align: left;
-      text-indent: 50px;
     }
   </style>
 </head>
@@ -66,17 +65,21 @@
       if (page === 'Homepage') {
         content.innerHTML = `
           <h2>Homepage</h2>
-          <p style=font-weight: bold;">Intro</p>
+          <p style="font-weight: bold;">Intro</p>
           <p>The world wide web exists and functions because of the evolution and development of the HTML language. 
             It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
             it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
-          <p style=font-weight: bold;">Key Terms</p>
+          <p style="font-weight: bold;">Key Terms</p>
           <p>Key Term 1</p>
           <p>Key Term 2</p>
           <p>Key Term 3</p>
           <p>Key Term 4</p>
-          <p style=font-weight: bold;">Table of Contents</p>
-          <p><button onclick="showLetter('Topic 1')">Topic 1</button></p>
+          <p style="font-weight: bold;">Table of Contents</p>
+          <p><a href="#" onclick="showLetter('Topic 1'); return false;">Topic 1</a></p>
+          <p><a href="#" onclick="showLetter('Topic 2'); return false;">Topic 2</a></p>
+          <p><a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a></p>
+          <p><a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a></p>
+          <p><a href="#" onclick="showLetter('About'); return false;">About</a></p>
           `;
       } else if(page === 'Topic 1') {
         content.innerHTML = "<h2>Topic 1</h2><p>Content for Topic 1 here.</P>";
@@ -93,6 +96,7 @@
   </script>
 </body>
 </html>
+
 
 
 
