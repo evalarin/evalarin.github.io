@@ -27,7 +27,7 @@ e<!DOCTYPE html>
       font-family: inherit;
     }
     main {
-      font-size: 100px;
+      font-size: 50px;
       margin-top: 50px;
     }
     main h2 {
@@ -46,19 +46,19 @@ e<!DOCTYPE html>
   <header>
     <h1>HTML, Where it Started and Where it is Going</h1>
     <nav>
-      <button onclick="showLetter('Homepage')">A</button>
-      <button onclick="showLetter('Topic 1')">B</button>
-      <button onclick="showLetter('Topic 2')">C</button>
-      <button onclick="showLetter('References & Resources')">D</button>
-      <button onclick="showLetter('Key Concepts')">E</button>
-      <button onclick="showLetter('About')">F</button>
+      <button onclick="showLetter('Homepage')">Homepage</button>
+      <button onclick="showLetter('Topic 1')">Topic 1</button>
+      <button onclick="showLetter('Topic 2')">Topic 2</button>
+      <button onclick="showLetter('References & Resources')">References & Resources</button>
+      <button onclick="showLetter('Key Concepts')">Key Concepts</button>
+      <button onclick="showLetter('About')">About</button>
     </nav>
   </header>
 
   <main id="content"></main>
 
   <script>
-    function showLetter(letter) {
+    function showLetter(page) {
       const content = document.getElementById('content');
 
       if (page === 'Homepage') {
@@ -89,6 +89,7 @@ e<!DOCTYPE html>
   </script>
 </body>
 </html>
+
 
 
 
