@@ -31,6 +31,9 @@
     main {
       font-size: 50px;
       margin-top: 50px;
+      display: flex;
+      flex-direciton: column;
+      align-items: center;
     }
     main h2 {
       font-size: 36px;
@@ -41,6 +44,18 @@
       margin: 0 auto;
       text-align: left;
     }
+    .highlight{
+      background-color: #FFB7CE;
+      padding: 5px;
+    }
+    #main-title{
+      font-family:'Arial', serif;
+      color: hotpink;
+    }
+    a:hover{
+      color: pink;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -48,15 +63,19 @@
     <h1>HTML, Where it Started and Where it is Going</h1>
     <nav>
       <button onclick="showLetter('Homepage')">Homepage</button>
-      <button onclick="showLetter('Topic 1')">Topic 1</button>
-      <button onclick="showLetter('Topic 2')">Topic 2</button>
+      <button onclick="showLetter('Past and Present HTML')">Past and Present HTML</button>
+      <button onclick="showLetter('Future HTML')">Future HTML</button>
       <button onclick="showLetter('References & Resources')">References & Resources</button>
       <button onclick="showLetter('Key Concepts')">Key Concepts</button>
       <button onclick="showLetter('About')">About</button>
     </nav>
   </header>
 
-  <main id="content"></main>
+  <main id="content">
+    <h2 id="main-title">Welcome to my Website!</h2>
+    <p>Click the tabs to explore!!!</p>
+    <img src="https://www.freepik.com/free-vector/pink-heart-flat-style_199775772.htm#fromView=keyword&page=1&position=0&uuid=2626952f-bd5b-4662-8761-107c0df7a998&query=Cute+heart" alt="Pink Heart" style="margin-top: 20px; border: 2px solid pink;">
+  </main>
 
   <script>
     function showLetter(page) {
@@ -64,38 +83,119 @@
 
       if (page === 'Homepage') {
         content.innerHTML = `
-          <h2>Homepage</h2>
+          <h2 id="main-title">Homepage</h2>
           <p style="font-weight: bold;">Intro</p>
           <p>The world wide web exists and functions because of the evolution and development of the HTML language. 
             It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
             it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
+          <p>HTML stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web.
+          In short, HTML tells the browser how to display messages by labeling different components like “this is a paragraph” or “this is a heading”,
+          it is the basic structure that can be built upon. The language breaks this down by placing what is being posted by using greater and lesser signs,
+          i.e. &lt;body&rt; or &lt;title&rt;. Those bracketed words are called tags, and you can start a paragraph this way. The tag will be &lt;p&rt; (enter paragraph here) &lt;/p&rt; the p stands
+          for paragraph and this is how you would create a paragraph like this on a basic web page. A web browser will take that data and display the content on a web page but
+          instead of seeing bracketed letters you would see the paragraph in between. A web page can be more than just letters and that is where CSS and JavaScript come into play. 
+          CSS stands for cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out, this is one step to adding on 
+          to the structure, CSS brings the presentation. If you want your font to be red you could use HTML CSS and code the following: &lt;p style="color:red;"&rt; (enter
+          paragraph here) &lt;/p&rt;. This will produce a paragraph with red font. Now, you can continue to add on to the structure and presentation by bringing in the behavior of a web page.
+          JavaScript allows for more interactive web pages for the user. It can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will
+          stimulate a response.</p>
           <p style="font-weight: bold;">Key Terms</p>
-          <p>Key Term 1</p>
-          <p>Key Term 2</p>
-          <p>Key Term 3</p>
-          <p>Key Term 4</p>
+          <ul style="list-style-type: circle; color: pink;">
+            <li>HTML: stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web</li>
+            <li>CSS: cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out</li>
+            <li>JavaScript: can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will stimulate a response</li>
+            <li>API: application programming interfaces and allows different applications to facilitate transfer and communicate with each other or different external services</li>
+          </ul>
           <p style="font-weight: bold;">Table of Contents</p>
-          <p><a href="#" onclick="showLetter('Topic 1'); return false;">Topic 1</a></p>
+          <p><a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a></p>
           <p><a href="#" onclick="showLetter('Topic 2'); return false;">Topic 2</a></p>
           <p><a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a></p>
           <p><a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a></p>
           <p><a href="#" onclick="showLetter('About'); return false;">About</a></p>
           `;
-      } else if(page === 'Topic 1') {
-        content.innerHTML = "<h2>Topic 1</h2><p>Content for Topic 1 here.</P>";
-      }else if(page === 'Topic 2') {
-        content.innerHTML = "<h2>Topic 2</h2><p>Content for Topic 2 here.</P>";
+      } else if(page === 'Past and Present HTML') {
+        content.innerHTML = `
+        "<h2 id="main-title">Past and Present HTML</h2>
+        <table border="1" style="margin: 20px auto; border-collapse: collapse;">
+          <tr>
+            <th>HTML Version</th>
+            <th>Release Year</th>
+          </tr>
+          <tr>
+            <td>HTML 1.0</td>
+            <td>1993</td>
+          </tr>
+          <tr>
+            <td>HTML 4.01</td>
+            <td>1999</td>
+          </tr>
+          <tr>
+            <td>HTML5</td>
+            <td>2012</td>
+          </tr>
+        </table>
+        <p>HTML was invented fairly recently back in 1991 by a physicist named Sir Tim Berners-Lee. While it was invented in 1991 it was not released until 1993
+        and not published until 1995. It was called HTML 1.0, the original version which only consisted of 18 HTML tags. Developers weren’t creating many websites
+        at the time so HTML 2.0 was released in 1995 with the first publication. It had many of the same features but a few extra details that led to this model being
+        the standard until 1997. This is where HTML 3.0 came about, introduced by Dave Raggett, this version created more powerful additions like tables, fonts and abilities
+        to the language but unfortunately slowed down browsing speeds as technology had not caught up quite yet. HTML development continued to be expanded upon, hence introducing
+        HTML 4.01 in 1999 which is one of the most widely used versions of the language. However, in 2012 HTML 5 was introduced which is an extended version of the last release where
+        there are about 140 tags and semantic elements like multimedia support, but not all of them are currently supported by modern browsers. HTML5 was an important introduction to
+        the development of web pages as its most important impact was its ability to make more impressive and interactive web pages “without additional software or plugins”. The multimedia
+        support HTML5 introduced changed the game for the ability to have multimedia content on a web page without the user having to have the Adobe Flash plug in. HTML5 also introduced the
+        ability to make web pages unbelievably more compatible for mobile devices. As mobile devices started to rise the need for web sites to be more functionable on them grew and HTML5 was
+        the solution. HTML was developed quickly throughout the years and since then has been a solid standard for what we see today. With the basic understanding of the language and the
+        history behind how it started, we can learn more about the language we deal with today.</p>
+	      <p>Today’s web pages consist of complex applications and a need for quick, efficient functionality. This is where APIs come in. API stands for application programming interfaces
+        and allows different applications to facilitate transfer and communicate with each other or different external services. Users expect web pages to load quickly, be accessible,
+        contain cross functioning abilities and to be easily understandable. HTML has evolved to support today's technology based generation. This includes using Web Content Accessibility
+        Guidelines (WCAG), tools like Lighthouse and WebPageTest and tools like REST (Representational State Transfer) and GraphQL to provide structured data to different web pages that
+        were built with HTML. There are even some new developments this year with HTML coding. One of them being the ability to put a horizontal line in a select tab. If you put &lt;hr&rt;
+        in between the other options in your select menu, this will have a horizontal rule (line) between. As HTML develops it still stands to this day as the main web programming language
+        , “1.9 billion of all websites use HTML, and 190 million of those are active” and “over 95% of all websites use HTML.” HTML is so commonly used that all browsers, like Chrome and
+        Firefox support HTML. It is such an incredibly dominant source in this world of technology with no plans to be changed and with all the plans to continue growth and change with the
+        times. As of the day this essay is being written, 95% of websites are now using HTML5 and 97.1% are using HTML, W3techs breaks down the usage on a day by day basis proving just how
+        important these languages are. It even shows new websites that have implemented HTML5 recently. With all of these current tools, web technologies are continuing to evolve, so HTML
+        needs to adapt to meet new demands leading to future developments.</p>";`
+      }else if(page === 'Future HTML') {
+        content.innerHTML = `
+        "<h2 id="main-title">Future HTML</h2>
+        <p class="highlight">The world of technology is expanding and growing daily, and with that more and more people are using the internet to browse and create. HTML will need to and is continuing to
+        evolve to make room for bigger and better things. Only recently has HTML5 been more widely used, again due to the need for things like improved connectivity,  more storage and
+        offline benefits, integration, performance, special effects and more. The HTML living standards sees many possible future creations to come, some of which are the ability to resize
+        images, giving an image's pixel size the ability to adjust across platforms. AI could also have a big impact on the growth of HTML. As AI progresses we could see automatic
+        adjustment of content and images requiring less HTML code which could make coding more accessible for beginners. There is also a community of people who maintain but also develop
+        new HTML standards called WHATWG, which stands for Web Hypertext Application Technology Working Group. In short this group helps with developing new ideas and help get them developed
+        into actual standards for the community. As HTML continues to grow one of the bigger negatives that could occur could be the more difficult ability for backwards compatibility on
+        devices that haven’t been upgraded. So while the future of HTML is bright and ever growing, developers who use HTML still need to keep in mind the majority of users and if the new
+        HTML coding can be accessed on older devices still majorly in use.</p>";`
       }else if(page === 'References & Resources') {
-        content.innerHTML = "<h2>References & Resources</h2><p>Content for References & Resources here.</P>";
+        content.innerHTML = `
+        "<h2 id="main-title">References & Resources</h2>
+        <p style="font-weight: bold;">Sources</p>
+        <p>
+        <a href="https://www.w3schools.com/html/html_intro.asp"</a>
+        <a href="w3schools.in/html/history/"</a>
+        <a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6"</a>
+        <a href="https://frontendmasters.com/blog/bone-up-html-2025/"</a>
+        <a href="https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/"</a>
+        <a href="https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai"</a> 
+        <a href="https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest"</a>
+        <a href="https://www.w3.org/People/Bos/DesignGuide/compatibility.html"</a>
+        <a href="https://firstsiteguide.com/html-stats/"</a>
+        <a href="https://www.oyova.com/blog/html5-and-your-content-what-to-do/"</a>
+        <a href="https://w3techs.com/technologies/details/ml-html5"</a>
+        </p> ";`
       }else if(page === 'Key Concepts') {
-        content.innerHTML = "<h2>Key Concepts</h2><p>Content for Key Concepts here.</P>";
+        content.innerHTML = "<h2 id="main-title">Key Concepts</h2><p>Content for Key Concepts here.</p>";
       }else if(page === 'About') {
-        content.innerHTML = "<h2>About</h2><p>Content for About here.</P>";
+        content.innerHTML = "<h2 id="main-title">About</h2><p>Elena Valarino, Undergraduate Student at Kennesaw State University going for a Degree in IT with a concentration in Enterprise Systems and a minor in Dance</p>";
       }
     }
   </script>
 </body>
 </html>
+
 
 
 
