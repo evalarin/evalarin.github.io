@@ -30,6 +30,16 @@ e<!DOCTYPE html>
       font-size: 100px;
       margin-top: 50px;
     }
+    main h2 {
+      font-size: 36px;
+    }
+    main p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: right;
+      text-indent: 50px;
+    }
   </style>
 </head>
 <body>
@@ -45,13 +55,13 @@ e<!DOCTYPE html>
     </nav>
   </header>
 
-  <main id="content">A</main>
+  <main id="content"></main>
 
   <script>
     function showLetter(letter) {
       const content = document.getElementById('content');
 
-      if (letter === 'A') {
+      if (page === 'Homepage') {
         content.innerHTML = `
           <h2 style="font-size:36px;">Homepage</h2>
           <p style="
@@ -64,13 +74,22 @@ e<!DOCTYPE html>
             It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
             it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
           `;
-      } else {
-        content.textContent = letter;
+      } else if(page === 'Topic 1') {
+        content.innerHTML = "<h2>Topic 1</h2><p>Content for Topic 1 here.</P>";
+      }else if(page === 'Topic 2') {
+        content.innerHTML = "<h2>Topic 2</h2><p>Content for Topic 2 here.</P>";
+      }else if(page === 'References & Resources') {
+        content.innerHTML = "<h2>References & Resources</h2><p>Content for References & Resources here.</P>";
+      }else if(page === 'Key Concepts') {
+        content.innerHTML = "<h2>Key Concepts</h2><p>Content for Key Concepts here.</P>";
+      }else if(page === 'About') {
+        content.innerHTML = "<h2>About</h2><p>Content for About here.</P>";
       }
     }
   </script>
 </body>
 </html>
+
 
 
 
