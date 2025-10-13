@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Simple Site</title>
+  <style>
+    body {
+      background: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    button {
+      background: white;
+      border: 1px solid black;
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    main {
+      font-size: 100px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Simple Site</h1>
+    <p>Here is my title. Here is the body.</p>
+    <nav>
+      <button onclick="showLetter('A')">A</button>
+      <button onclick="showLetter('B')">B</button>
+      <button onclick="showLetter('C')">C</button>
+      <button onclick="showLetter('D')">D</button>
+      <button onclick="showLetter('E')">E</button>
+      <button onclick="showLetter('F')">F</button>
+    </nav>
+  </header>
+
+  <main id="content">A</main>
+
+  <script>
+    function showLetter(letter) {
+      document.getElementById('content').textContent = letter;
+    }
+  </script>
+</body>
+</html>
