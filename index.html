@@ -10,7 +10,7 @@
   <style>
 /* Basic Styles */
     body {
-      background: white;
+      background: #dde6f8;
       color: black;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -102,12 +102,12 @@
 	#homepage{
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
-		background: #f4f7fc;
-		padding: 40px;
-		border-radius: 12px;
-		margin: 30px auto;
-		width: 85%;
+		align-items: stretch
+		background: #d5e0f7;
+		padding: 40px 10%;
+		border-radius: 0;
+		margin: 0;
+		width: 100%;
 		gap: 30px;
 	}
 	#homepageleft {
@@ -118,6 +118,8 @@
 		font-size: 34px;
 		font-weight: bold;
 		margin-bottom: 5px;
+		font-family: "Georgia","Times New Roman", serif;
+		letter-spacing; 1px;
 	}
 	#homepageleft h3{
 		font-size: 28px;
@@ -130,9 +132,10 @@
 		line-heigh: 1.55;
 		margin-bottom: 15px;
 		color: #333;
+		text-align: left;
 	}
 	#keyterms {
-		width: 30%;
+		width: 35%;
 		background: #e8f0fa;
 		border: 2px solid #c3cfdd;
 		padding: 18px;
@@ -142,31 +145,37 @@
 		color: #1f2a3a;
 		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 	}
-	#keyterms strong (
+	#keyterms strong {
 	  font-size: 17px;
+	  font-weight: bold;
 	  }
 	#homepagetableofcontents{
 		width: 100%;
-		background: #edf3fb;
-		border-top: 2px solid #cedae8;
-		padding: 25px;
-		margin-top: 25px;
+		background: #24334f;
+		border-top: 2px solid #182133;
+		padding: 10px 0 18px;
+		margin-top: 0;
 		text-align: center;
-		border-radius: 10px;
+		border-radius: 0;
 	}
 	#homepagetableofcontents h4{
-		font-size: 22px;
-		margin-bottom: 15px;
+		font-size: 16px;
+		margin-bottom: 8px;
+		color: f4f7ff;
+		text-transform: uppercase;
+		letter-spacing: 2px;
 	}
 	#homepagetableofcontents a{
-		margin: 8px 12px;
+		margin: 0px 12px;
 		display: inline-block;
-		font-size: 18px;
-		color: #064a8c;
+		font-size: 16px;
+		color: #fbe9ff;
 		text-decoration: none;
 		font-weight: bold;
 	}
-	#homepagetableofcontents a;hover {
+	#homepagetableofcontents a;hover,
+	#homepagetableofcontents a:active {
+		color: #c2185b;
 		text-decoration: underline;
 	}
   </style>
@@ -227,10 +236,10 @@
 				<div id="keyterms">
 					<strong>Key Terms</strong><br><br>
 					<ul>
-            			<li>HTML: stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web</li>
-           				<li>CSS: cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out</li>
-            			<li>JavaScript: can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will stimulate a response</li>
-            			<li>API: application programming interfaces and allows different applications to facilitate transfer and communicate with each other or different external services</li>
+            			<li><strong>HTML:</strong> stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web</li>
+           				<li><strong>CSS:</strong> cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out</li>
+            			<li><strong>JavaScript:</strong> can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will stimulate a response</li>
+            			<li><strong>API:</strong> application programming interfaces and allows different applications to facilitate transfer and communicate with each other or different external services</li>
           			</ul>
 				</div>
 			</div>
@@ -329,6 +338,7 @@
   </script>
 </body>
 </html>
+
 
 
 
