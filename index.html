@@ -211,8 +211,9 @@
   		justify-content: space-between;
   		align-items: flex-start;
   		background: #d5e0f7;
-  		padding: 40px 10%;
-  		width: 100%;
+  		padding: 40px 5%;
+		margin: 0 auto;
+  		width: 90%;
   		gap: 30px;
 	}
 	#pasttext {
@@ -225,7 +226,8 @@
 	#pasttext h3 {
   		font-size: 30px;
   		font-weight: bold;
-  		margin: 0 0 15px 0;
+  		margin: 20px 0 15px 0;
+		text-align: left;
 	}
 	#pasttext p {
   		margin-bottom: 15px;
@@ -338,6 +340,7 @@
         content.innerHTML = `
         <div id="hometitle">Past and Present HTML</div>
         <div id="pastpresent">
+			<div id="pasttext">
 			<h3>Overview</h3>
         		<p>HTML was invented fairly recently back in 1991 by a physicist named Sir Tim Berners-Lee. While it was invented in 1991 it was not released until 1993
         		and not published until 1995. It was called HTML 1.0, the original version which only consisted of 18 HTML tags. Developers weren’t creating many websites
@@ -362,6 +365,7 @@
         		times. As of the day this essay is being written, 95% of websites are now using HTML5 and 97.1% are using HTML, W3techs breaks down the usage on a day by day basis proving just how
         		important these languages are. It even shows new websites that have implemented HTML5 recently. With all of these current tools, web technologies are continuing to evolve, so HTML
         		needs to adapt to meet new demands leading to future developments.</p>
+			
 		</div>
 		<div id="pasttablewrapper">
 			<table id="pasttable">
@@ -439,6 +443,7 @@
   </script>
 </body>
 </html>
+
 
 
 
