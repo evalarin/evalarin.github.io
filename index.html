@@ -17,19 +17,50 @@
       text-align: center;
     }
     header {
-      padding: 20px;
+      padding: 0;
+	  margin: 0;
+	  position: relative;
     }
-    nav {
-      margin-bottom: 20px;
+	#openingimage {
+		width: 100%;
+		height: 300px;
+		background-image: url(https://media.istockphoto.com/id/1460853312/photo/abstract-connected-dots-and-lines-concept-of-ai-technology-motion-of-digital-data-flow.webp?b=1&s=612x612&w=0&k=20&c=x0QPuKC83SPVcM7Wx364nTusL776cWWPL23U8HmlCfw=)
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#openingimagetitle {
+		font-size: 42px;
+		font-weight: bold;
+		color: #e7f3ff;
+		text-shadow: 0 0 8px rgba(0,0,0,0.5);
+		padding: 20px;
+	}
+	nav {
+    	margin: 20px 0;
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		flex-wrap: wrap;
+	}
+    nav button {
+		width: 110px;
+		height: 110px;
+		border-radius: 50%;
+		border: none;
+		cursor: pointer;
+		font-size: 12px;
+		padding: 10px;
+		color: black;
+		font-weight: bold;
+		background: linear-gradient(to right, #f6c0ff, #b0d7ff);
+		transition: 0.3s;
     }
-    button {
-      background: white;
-      border: 1px solid black;
-      padding: 10px 15px;
-      margin: 5px;
-      cursor: pointer;
-      font-family: inherit;
-    }
+	nav button:hover{
+		transform: scale(1.07);
+	}
     main {
       font-size: 50px;
       margin-top: 50px;
@@ -50,9 +81,9 @@
       background-color: #FFB7CE;
       padding: 5px;
     }
-    #main-title{
-      font-family:'Arial', serif;
-      color: hotpink;
+    #main-title {
+    	font-family:'Arial', serif;
+    	color: hotpink;
 		margin: 0 auto;
 		text-align: center;
     }
@@ -64,8 +95,10 @@
 </head>
 <body>
 <!-- Header Again but with the table of content buttons -->
-  <header>
-    <h1>HTML, Where it Started and Where it is Going</h1>
+<header>
+	<div id="hero">
+    	<h1>HTML, Where it Started and Where it is Going</h1>
+	</div>
     <nav>
       <button onclick="showLetter('Homepage')">Homepage</button>
       <button onclick="showLetter('Past and Present HTML')">Past and Present HTML</button>
@@ -74,12 +107,11 @@
       <button onclick="showLetter('Key Concepts')">Key Concepts</button>
       <button onclick="showLetter('About')">About</button>
     </nav>
-  </header>
+</header>
 <!-- What you see on the main page -->
   <main id="content">
     <h2 id="main-title">Welcome to my Website!</h2>
     <p>Click the tabs to explore!!!</p>
-    <img src="https://img.freepik.com/free-vector/pink-heart-flat-style_78370-6266.jpg?semt=ais_hybrid&w=740&q=80" alt="Pink Heart" style="margin-top: 20px; border: 2px solid pink;">
   </main>
 <!-- content on each different tab -->
   <script>
@@ -203,6 +235,7 @@
   </script>
 </body>
 </html>
+
 
 
 
