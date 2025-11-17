@@ -100,12 +100,14 @@
       color: pink;
       text-decoration: underline;
     }
-	#sectiontitle {
+	#hometitle {
 		font-family: "Courier New", monospace;
-		font-size: 30px;
+		font-size: 32px;
 		font-weight: bold;
 		color: hotpink;
-		margin: 20px auto 0 10%;
+		margin-left: 12%;
+		margin-top: 20px;
+		margin-botom: -10px;
 		text-align: left;
 	}
 	#homepage{
@@ -236,9 +238,9 @@
 
       if (page === 'Homepage') {
         content.innerHTML = `
+			<div id="hometitle">Homepage</div>
 			<div id="homepage">
 				<div id="homepageleft">
-					<h2>Homepage</h2>
 					<h3>Intro</h3>
          			 <p>
 					 	The world wide web exists and functions because of the evolution and development of the HTML language. 
@@ -365,6 +367,7 @@
   </script>
 </body>
 </html>
+
 
 
 
