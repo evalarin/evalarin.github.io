@@ -61,6 +61,14 @@
 	nav button:hover{
 		transform: scale(1.07);
 	}
+	#navbackground {
+		width: 100%;
+		background: rgba(240, 248, 255, 0.6);
+		backdrop-filter: blur(4px);
+		padding: 20px 0;
+		display: flex;
+		justify-content: center;
+	}
     main {
       font-size: 50px;
       margin-top: 50px;
@@ -91,6 +99,64 @@
       color: pink;
       text-decoration: underline;
     }
+	#homepage{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		background: #f7faff;
+		padding: 30px;
+		border-radius: 10px;
+		margin: 20px auto;
+		width: 85%;
+	}
+	#homepageleft {
+		width: 65%;
+		text-align: left;
+	}
+	#homepageleft h2{
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+	#hompageleft h3{
+		font-size: 28px;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+	#hompageleft p{
+		font-size: 18px;
+		line-heigh: 1.45;
+		margin-bottom: 12px;
+	}
+	#keyterms {
+		width: 28%;
+		background: #e6eef7;
+		border: 2px solid #bcc9d8;
+		padding: 15px;
+		border-radius: 10px;
+		font-size: 15px;
+		text-align: left;
+	}
+	#homepagetableofcontents{
+		width: 100%
+		background: #dde8f5;
+		border-top: 2px solid #b8c5d3;
+		padding: 15px;
+		margin-top;
+		text-align: center;
+	}
+	#homepagetableofcontents h4{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	#homepagetableofcontents a{
+		margin: 0 15px;
+		font-size: 16px;
+		color: #005f9e;
+		text-decoration: none;
+	}
+	#homepagetableofcontents a;hover {
+		text-decoration: underline;
+	}
   </style>
 </head>
 <body>
@@ -99,19 +165,21 @@
 	<div id="openingimage">
     	<h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
 	</div>
-    <nav>
-      <button onclick="showLetter('Homepage')">Homepage</button>
-      <button onclick="showLetter('Past and Present HTML')">Past and Present HTML</button>
-      <button onclick="showLetter('Future HTML')">Future HTML</button>
-      <button onclick="showLetter('References & Resources')">References & Resources</button>
-      <button onclick="showLetter('Key Concepts')">Key Concepts</button>
-      <button onclick="showLetter('About')">About</button>
-    </nav>
+	<div id="navbackground">
+    	<nav>
+      		<button onclick="showLetter('Homepage')">Homepage</button>
+      		<button onclick="showLetter('Past and Present HTML')">Past and Present HTML</button>
+      		<button onclick="showLetter('Future HTML')">Future HTML</button>
+      		<button onclick="showLetter('References & Resources')">References & Resources</button>
+      		<button onclick="showLetter('Key Concepts')">Key Concepts</button>
+      		<button onclick="showLetter('About')">About</button>
+    	</nav>
+	</div>
 </header>
 <!-- What you see on the main page -->
   <main id="content">
     <h2 id="main-title">Welcome to my Website!</h2>
-    <p>Click the tabs to explore!!!</p>
+    <p>Click the tabs to explore</p>
   </main>
 <!-- content on each different tab -->
   <script>
@@ -120,35 +188,49 @@
 
       if (page === 'Homepage') {
         content.innerHTML = `
-          <h2 id="main-title">Homepage</h2>
-          <p style="font-weight: bold;">Intro</p>
-          <p>The world wide web exists and functions because of the evolution and development of the HTML language. 
-            It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
-            it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.</p>
-          <p>HTML stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web.
-          In short, HTML tells the browser how to display messages by labeling different components like “this is a paragraph” or “this is a heading”,
-          it is the basic structure that can be built upon. The language breaks this down by placing what is being posted by using greater and lesser signs,
-          i.e. &lt;body&rt; or &lt;title&rt;. Those bracketed words are called tags, and you can start a paragraph this way. The tag will be &lt;p&rt; (enter paragraph here) &lt;/p&rt; the p stands
-          for paragraph and this is how you would create a paragraph like this on a basic web page. A web browser will take that data and display the content on a web page but
-          instead of seeing bracketed letters you would see the paragraph in between. A web page can be more than just letters and that is where CSS and JavaScript come into play. 
-          CSS stands for cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out, this is one step to adding on 
-          to the structure, CSS brings the presentation. If you want your font to be red you could use HTML CSS and code the following: &lt;p style="color:red;"&rt; (enter
-          paragraph here) &lt;/p&rt;. This will produce a paragraph with red font. Now, you can continue to add on to the structure and presentation by bringing in the behavior of a web page.
-          JavaScript allows for more interactive web pages for the user. It can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will
-          stimulate a response.</p>
-          <p style="font-weight: bold;">Key Terms</p>
-          <ul style="list-style-type: circle; color: pink;">
-            <li>HTML: stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web</li>
-            <li>CSS: cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out</li>
-            <li>JavaScript: can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will stimulate a response</li>
-            <li>API: application programming interfaces and allows different applications to facilitate transfer and communicate with each other or different external services</li>
-          </ul>
-          <p style="font-weight: bold;">Table of Contents</p>
-          <p><a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a></p>
-          <p><a href="#" onclick="showLetter('Topic 2'); return false;">Topic 2</a></p>
-          <p><a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a></p>
-          <p><a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a></p>
-          <p><a href="#" onclick="showLetter('About'); return false;">About</a></p>
+			<div id="homepage-container">
+				<div id="homepageleft">
+					<h2>Homepage</h2>
+					<h3>Intro</h3>
+         			 <p>
+					 	The world wide web exists and functions because of the evolution and development of the HTML language. 
+           			 	It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the internet, 
+           			 	it has grown and adapted to meet the needs of new technology and expectations of the new generation of users.
+					 </p>
+         			 <p>
+					 	HTML stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web.
+        			 	In short, HTML tells the browser how to display messages by labeling different components like “this is a paragraph” or “this is a heading”,
+          				it is the basic structure that can be built upon. The language breaks this down by placing what is being posted by using greater and lesser signs,
+          				i.e. &lt;body&rt; or &lt;title&rt;. Those bracketed words are called tags, and you can start a paragraph this way. The tag will be &lt;p&rt; (enter paragraph here) &lt;/p&rt; the p stands
+          				for paragraph and this is how you would create a paragraph like this on a basic web page. A web browser will take that data and display the content on a web page but
+          				instead of seeing bracketed letters you would see the paragraph in between. A web page can be more than just letters and that is where CSS and JavaScript come into play. 
+          				CSS stands for cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out, this is one step to adding on 
+          				to the structure, CSS brings the presentation. If you want your font to be red you could use HTML CSS and code the following: &lt;p style="color:red;"&rt; (enter
+          				paragraph here) &lt;/p&rt;. This will produce a paragraph with red font. Now, you can continue to add on to the structure and presentation by bringing in the behavior of a web page.
+          				JavaScript allows for more interactive web pages for the user. It can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will
+          				stimulate a response.
+					</p>
+				</div>
+
+				<div id="keyterms">
+					<strong>Key Terms</strong><br><br>
+					<ul>
+            			<li>HTML: stands for hyper text markup language and is the basic standard language for creation of readable web pages on the world wide web</li>
+           				<li>CSS: cascading style sheets and this is where you can bring in color, font and even spacing or where the paragraphs are laid out</li>
+            			<li>JavaScript: can add a pop up to your page that allows you to click and have it take you somewhere else or clicking will stimulate a response</li>
+            			<li>API: application programming interfaces and allows different applications to facilitate transfer and communicate with each other or different external services</li>
+          			</ul>
+				</div>
+			</div>
+
+			<div id="hompagetableofcontents">
+				<h4>Table of Contents</h4>
+          			<a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a></p>
+          			<a href="#" onclick="showLetter('Topic 2'); return false;">Topic 2</a></p>
+          			<a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a></p>
+          			<a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a></p>
+          			<a href="#" onclick="showLetter('About'); return false;">About</a></p>
+			</div>
           `;
       } else if(page === 'Past and Present HTML') {
         content.innerHTML = `
@@ -235,6 +317,7 @@
   </script>
 </body>
 </html>
+
 
 
 
