@@ -91,7 +91,7 @@
       padding: 5px;
     }
     #main-title {
-    	font-family:'Arial', serif;
+    	font-family: "Courier New", monospace;
     	color: hotpink;
 		margin: 0 auto;
 		text-align: center;
@@ -206,6 +206,59 @@
 		color: #c2185b;
 		text-decoration: underline;
 	}
+	#pastpresent {
+		display: flex;
+  		justify-content: space-between;
+  		align-items: flex-start;
+  		background: #d5e0f7;
+  		padding: 40px 10%;
+  		width: 100%;
+  		gap: 30px;
+	}
+	#pasttext {
+  		width: 65%;
+  		text-align: left;
+  		font-size: 17px;
+  		line-height: 1.55;
+  		color: #333;
+	}
+	#pasttext h3 {
+  		font-size: 30px;
+  		font-weight: bold;
+  		margin: 0 0 15px 0;
+	}
+	#pasttext p {
+  		margin-bottom: 15px;
+	}
+	#pasttablewrapper {
+  		width: 30%;
+	}
+	#pasttable {
+  		width: 100%;
+  		border-collapse: collapse;
+  		background: linear-gradient(90deg, #6a11cb, #2575fc);
+  		color: #ffffff;
+  		border-radius: 12px;
+  		overflow: hidden;
+	}
+	#pasttable th,
+	#pasttable td {
+  		padding: 12px 14px;
+  		text-align: left;
+  		font-size: 14px;
+	}
+	#pasttable thead {
+  		background: rgba(255, 255, 255, 0.12);
+  		text-transform: uppercase;
+  		letter-spacing: 1px;
+  		font-size: 13px;
+	}
+	#pasttable tbody tr:nth-child(even) {
+  		background: rgba(255, 255, 255, 0.06);
+	}
+	#pasttable tbody tr:hover {
+  		background: rgba(255, 255, 255, 0.18);
+	}
   </style>
 </head>
 <body>
@@ -275,7 +328,7 @@
 			<div id="homepagetableofcontents">
 				<h4>Table of Contents</h4>
           			<a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a>
-          			<a href="#" onclick="showLetter('Topic 2'); return false;">Topic 2</a>
+          			<a href="#" onclick="showLetter('Future HTML'); return false;">Future HTML</a>
           			<a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a>
           			<a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a>
           			<a href="#" onclick="showLetter('About'); return false;">About</a>
@@ -283,48 +336,69 @@
           `;
       } else if(page === 'Past and Present HTML') {
         content.innerHTML = `
-        <h2 id="main-title">Past and Present HTML</h2>
-        <table border="1" style="margin: 20px auto; border-collapse: collapse;">
-          <tr>
-            <th>HTML Version</th>
-            <th>Release Year</th>
-          </tr>
-          <tr>
-            <td>HTML 1.0</td>
-            <td>1993</td>
-          </tr>
-          <tr>
-            <td>HTML 4.01</td>
-            <td>1999</td>
-          </tr>
-          <tr>
-            <td>HTML5</td>
-            <td>2012</td>
-          </tr>
-        </table>
-        <p>HTML was invented fairly recently back in 1991 by a physicist named Sir Tim Berners-Lee. While it was invented in 1991 it was not released until 1993
-        and not published until 1995. It was called HTML 1.0, the original version which only consisted of 18 HTML tags. Developers weren’t creating many websites
-        at the time so HTML 2.0 was released in 1995 with the first publication. It had many of the same features but a few extra details that led to this model being
-        the standard until 1997. This is where HTML 3.0 came about, introduced by Dave Raggett, this version created more powerful additions like tables, fonts and abilities
-        to the language but unfortunately slowed down browsing speeds as technology had not caught up quite yet. HTML development continued to be expanded upon, hence introducing
-        HTML 4.01 in 1999 which is one of the most widely used versions of the language. However, in 2012 HTML 5 was introduced which is an extended version of the last release where
-        there are about 140 tags and semantic elements like multimedia support, but not all of them are currently supported by modern browsers. HTML5 was an important introduction to
-        the development of web pages as its most important impact was its ability to make more impressive and interactive web pages “without additional software or plugins”. The multimedia
-        support HTML5 introduced changed the game for the ability to have multimedia content on a web page without the user having to have the Adobe Flash plug in. HTML5 also introduced the
-        ability to make web pages unbelievably more compatible for mobile devices. As mobile devices started to rise the need for web sites to be more functionable on them grew and HTML5 was
-        the solution. HTML was developed quickly throughout the years and since then has been a solid standard for what we see today. With the basic understanding of the language and the
-        history behind how it started, we can learn more about the language we deal with today.</p>
-	      <p>Today’s web pages consist of complex applications and a need for quick, efficient functionality. This is where APIs come in. API stands for application programming interfaces
-        and allows different applications to facilitate transfer and communicate with each other or different external services. Users expect web pages to load quickly, be accessible,
-        contain cross functioning abilities and to be easily understandable. HTML has evolved to support today's technology based generation. This includes using Web Content Accessibility
-        Guidelines (WCAG), tools like Lighthouse and WebPageTest and tools like REST (Representational State Transfer) and GraphQL to provide structured data to different web pages that
-        were built with HTML. There are even some new developments this year with HTML coding. One of them being the ability to put a horizontal line in a select tab. If you put &lt;hr&rt;
-        in between the other options in your select menu, this will have a horizontal rule (line) between. As HTML develops it still stands to this day as the main web programming language
-        , “1.9 billion of all websites use HTML, and 190 million of those are active” and “over 95% of all websites use HTML.” HTML is so commonly used that all browsers, like Chrome and
-        Firefox support HTML. It is such an incredibly dominant source in this world of technology with no plans to be changed and with all the plans to continue growth and change with the
-        times. As of the day this essay is being written, 95% of websites are now using HTML5 and 97.1% are using HTML, W3techs breaks down the usage on a day by day basis proving just how
-        important these languages are. It even shows new websites that have implemented HTML5 recently. With all of these current tools, web technologies are continuing to evolve, so HTML
-        needs to adapt to meet new demands leading to future developments.</p>`;
+        <div id="hometitle">Past and Present HTML</div>
+        <div id="pastpresent">
+			<h3>Overview</h3>
+        		<p>HTML was invented fairly recently back in 1991 by a physicist named Sir Tim Berners-Lee. While it was invented in 1991 it was not released until 1993
+        		and not published until 1995. It was called HTML 1.0, the original version which only consisted of 18 HTML tags. Developers weren’t creating many websites
+        		at the time so HTML 2.0 was released in 1995 with the first publication. It had many of the same features but a few extra details that led to this model being
+        		the standard until 1997. This is where HTML 3.0 came about, introduced by Dave Raggett, this version created more powerful additions like tables, fonts and abilities
+        		to the language but unfortunately slowed down browsing speeds as technology had not caught up quite yet. HTML development continued to be expanded upon, hence introducing
+        		HTML 4.01 in 1999 which is one of the most widely used versions of the language. However, in 2012 HTML 5 was introduced which is an extended version of the last release where
+        		there are about 140 tags and semantic elements like multimedia support, but not all of them are currently supported by modern browsers. HTML5 was an important introduction to
+        		the development of web pages as its most important impact was its ability to make more impressive and interactive web pages “without additional software or plugins”. The multimedia
+        		support HTML5 introduced changed the game for the ability to have multimedia content on a web page without the user having to have the Adobe Flash plug in. HTML5 also introduced the
+        		ability to make web pages unbelievably more compatible for mobile devices. As mobile devices started to rise the need for web sites to be more functionable on them grew and HTML5 was
+        		the solution. HTML was developed quickly throughout the years and since then has been a solid standard for what we see today. With the basic understanding of the language and the
+        		history behind how it started, we can learn more about the language we deal with today.</p>
+	      		<p>Today’s web pages consist of complex applications and a need for quick, efficient functionality. This is where APIs come in. API stands for application programming interfaces
+        		and allows different applications to facilitate transfer and communicate with each other or different external services. Users expect web pages to load quickly, be accessible,
+        		contain cross functioning abilities and to be easily understandable. HTML has evolved to support today's technology based generation. This includes using Web Content Accessibility
+        		Guidelines (WCAG), tools like Lighthouse and WebPageTest and tools like REST (Representational State Transfer) and GraphQL to provide structured data to different web pages that
+        		were built with HTML. There are even some new developments this year with HTML coding. One of them being the ability to put a horizontal line in a select tab. If you put &lt;hr&rt;
+        		in between the other options in your select menu, this will have a horizontal rule (line) between. As HTML develops it still stands to this day as the main web programming language
+        		, “1.9 billion of all websites use HTML, and 190 million of those are active” and “over 95% of all websites use HTML.” HTML is so commonly used that all browsers, like Chrome and
+        		Firefox support HTML. It is such an incredibly dominant source in this world of technology with no plans to be changed and with all the plans to continue growth and change with the
+        		times. As of the day this essay is being written, 95% of websites are now using HTML5 and 97.1% are using HTML, W3techs breaks down the usage on a day by day basis proving just how
+        		important these languages are. It even shows new websites that have implemented HTML5 recently. With all of these current tools, web technologies are continuing to evolve, so HTML
+        		needs to adapt to meet new demands leading to future developments.</p>
+		</div>
+		<div id="pasttablewrapper">
+			<table id="pasttable">
+				<thead>
+					<tr>
+            			<th>HTML Version</th>
+            			<th>Release Year</th>
+          			</tr>
+				</thead>
+				<tbody>
+          			<tr>
+           				<td>HTML 1.0</td>
+            			<td>1993</td>
+          			</tr>
+          			<tr>
+            			<td>HTML 4.01</td>
+            			<td>1999</td>
+          			</tr>
+          			<tr>
+            			<td>HTML5</td>
+            			<td>2012</td>
+          			</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+
+		<div id="homepagetableofcontents">
+				<h4>Table of Contents</h4>
+          			<a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a>
+          			<a href="#" onclick="showLetter('Future HTML'); return false;">Future HTML</a>
+          			<a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a>
+          			<a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a>
+          			<a href="#" onclick="showLetter('About'); return false;">About</a>
+			</div>
+		';
+	}
       }else if(page === 'Future HTML') {
         content.innerHTML = `
         <h2 id="main-title">Future HTML</h2>
@@ -366,6 +440,7 @@
   </script>
 </body>
 </html>
+
 
 
 
