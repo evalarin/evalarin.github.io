@@ -262,6 +262,97 @@
 	#pasttable tbody tr:hover {
   		background: rgba(255, 255, 255, 0.18);
 	}
+	#futurecontainer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		background: #d5e0f7;
+		padding: 40px 5%;
+		margin: 0 auto;
+		width: 90%;
+		gap: 30px;
+	}
+	#futureleft {
+		width: 65%;
+		text-align: left;
+		font-size: 17px;
+		line-height: 1.55;
+		color: #333;
+	}
+	#futureleft h3 {
+		font-size: 30px;
+		font-weight: bold;
+		margin: 0 0 15px 0;
+		font-family: "Courier New", monospace;
+		color: hotpink;
+	}
+	#futureleft p {
+		margin-bottom: 15px;
+	}
+	#futurebox {
+		width: 30%;
+		background: #e8f0fa;
+		border: 2px solid #c3cfdd;
+		padding: 15px;
+		border-radius: 12px;
+		font-size: 17px;
+		text-align: left;
+		color: #1f2a3a;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+	}
+	#futurebox strong {
+		display: block;
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+	#futurebox ul li {
+		margin-bottom: 10px;
+		line-height: 1.4;
+	}
+	#refscontainer {
+		display: flex;
+		justify-content: space-between:
+		align-items: flex-start;
+		background: #d5e0f7;
+		padding: 40px 5%;
+		margin: 0 auto;
+		width: 90%;
+		gap: 30px;
+	}
+	#refsleft {
+		width: 65%;
+		text-align: left;
+		font-size: 17px;
+		line-height: 1.55;
+		color: #333;
+	}
+	#refsleft h3 {
+		font-size: 30px;
+		font-weight: bold;
+		margin: 0 0 15px 0;
+		font-family: "Courier New", monospace;
+		color: hotpink;
+	}
+	#refsbox {
+		width: 30%;
+		background: #e8f0fa;
+		border: 2px solid #c3cfdd;
+		padding: 15px;
+		border-radisu: 12px;
+		font-size: 16px;
+		text-align: left;
+		color: #1f2a3a;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+	}
+	#refsbox strong {
+		display: block;
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+	#refsbox ul li {
+		margin-bottom: 8px;
+		line-height: 1.4;
+	}
   </style>
 </head>
 <body>
@@ -404,33 +495,94 @@
 		`;
       } else if(page === 'Future HTML') {
         content.innerHTML = `
-        <h2 id="main-title">Future HTML</h2>
-        <p class="highlight">The world of technology is expanding and growing daily, and with that more and more people are using the internet to browse and create. HTML will need to and is continuing to
-        evolve to make room for bigger and better things. Only recently has HTML5 been more widely used, again due to the need for things like improved connectivity,  more storage and
-        offline benefits, integration, performance, special effects and more. The HTML living standards sees many possible future creations to come, some of which are the ability to resize
-        images, giving an image's pixel size the ability to adjust across platforms. AI could also have a big impact on the growth of HTML. As AI progresses we could see automatic
-        adjustment of content and images requiring less HTML code which could make coding more accessible for beginners. There is also a community of people who maintain but also develop
-        new HTML standards called WHATWG, which stands for Web Hypertext Application Technology Working Group. In short this group helps with developing new ideas and help get them developed
-        into actual standards for the community. As HTML continues to grow one of the bigger negatives that could occur could be the more difficult ability for backwards compatibility on
-        devices that haven’t been upgraded. So while the future of HTML is bright and ever growing, developers who use HTML still need to keep in mind the majority of users and if the new
-        HTML coding can be accessed on older devices still majorly in use.</p>`;
+        <div id="hometitle">Future HTML</div>
+
+		<div id="futurecontainer">
+			<div id="futureleft">
+				<h3>Looking Ahead</h3>
+				
+       			 <p>
+					The world of technology is expanding and growing daily, and with that more and more people are using the internet to browse and create. HTML will need to and is continuing to
+       				evolve to make room for bigger and better things. Only recently has HTML5 been more widely used, again due to the need for things like improved connectivity,  more storage and
+       				offline benefits, integration, performance, special effects and more.
+				</p>
+				<p>
+					The HTML living standards sees many possible future creations to come, some of which are the ability to resize
+       				images, giving an image's pixel size the ability to adjust across platforms. AI could also have a big impact on the growth of HTML. As AI progresses we could see automatic
+        			adjustment of content and images requiring less HTML code which could make coding more accessible for beginners. There is also a community of people who maintain but also develop
+        			new HTML standards called WHATWG, which stands for Web Hypertext Application Technology Working Group. In short this group helps with developing new ideas and help get them developed
+        			into actual standards for the community. As HTML continues to grow one of the bigger negatives that could occur could be the more difficult ability for backwards compatibility on
+        			devices that haven’t been upgraded. So while the future of HTML is bright and ever growing, developers who use HTML still need to keep in mind the majority of users and if the new
+        			HTML coding can be accessed on older devices still majorly in use.
+				</p>
+			</div>
+
+			<div id="futurebox">
+				<strong>Future HTML Focus Areas</strong>
+				<ul>
+					<li>More powerful multimedia and animation without extra plugins.</li>
+					<li>Better tools for accessibility and semantic structure.</li>
+					<li>Smarter responsive layouts for phones, tablets, and desktops.</li>
+					<li>Deeper integration with APIs, AI tools, and web apps.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="homepagetableofcontents">
+			<h4>Table of Contents</h4>
+				<a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a>
+          		<a href="#" onclick="showLetter('Future HTML'); return false;">Future HTML</a>
+          		<a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a>
+          		<a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a>
+          		<a href="#" onclick="showLetter('About'); return false;">About</a>
+		</div>
+				`;
       }else if(page === 'References & Resources') {
         content.innerHTML = `
-        <h2 id="main-title">References & Resources</h2>
-        <p style="font-weight: bold;">Sources</p>
-        <p>
-        <a href="https://www.w3schools.com/html/html_intro.asp">https://www.w3schools.com/html/html_intro.asp</a>
-        <a href="w3schools.in/html/history/">w3schools.in/html/history/</a>
-        <a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6">https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6</a>
-        <a href="https://frontendmasters.com/blog/bone-up-html-2025/">https://frontendmasters.com/blog/bone-up-html-2025/</a>
-        <a href="https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/">https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/</a>
-        <a href="https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai">https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai</a> 
-        <a href="https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest">https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest</a>
-        <a href="https://www.w3.org/People/Bos/DesignGuide/compatibility.html">https://www.w3.org/People/Bos/DesignGuide/compatibility.html</a>
-        <a href="https://firstsiteguide.com/html-stats/">https://firstsiteguide.com/html-stats/</a>
-        <a href="https://www.oyova.com/blog/html5-and-your-content-what-to-do/">https://www.oyova.com/blog/html5-and-your-content-what-to-do/</a>
-        <a href="https://w3techs.com/technologies/details/ml-html5">https://w3techs.com/technologies/details/ml-html5</a>
-        </p>`
+        <div id="main-title">References & Resources</div>
+
+		<div id="refscontainer">
+			<div id="refsleft">
+				<h3>Using These Sources</h3>
+        		<p>
+					These are the articles, blogs and documentation pages used for my research on the history of HTML,
+					its current usage and where it may be headed in the future. They include official references, 
+					tutorials, statistics sites, and opinion pieces that helped support the information on this site.
+				</p>
+				<p>
+					Many of these resources discuss topics like HTML5 features, browser compatibility, accessibility,
+					performance, and how modern tools and APIs connect with HTML. Together they show how important HTML
+					still is, even as other languages, frameworks, and tools grow around it.
+				</p>
+			</div>
+
+			<div id="refsbox">
+				<strong>Source Links</strong>
+				<ul>
+        			<li><a href="https://www.w3schools.com/html/html_intro.asp">https://www.w3schools.com/html/html_intro.asp</a></li>
+        			<li><a href="w3schools.in/html/history/">w3schools.in/html/history/</a></li>
+        			<li><a href="https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6">https://medium.com/@MakeComputerScienceGreatAgain/the-evolution-of-web-development-from-html-to-modern-frameworks-b10a98ad91b6</a></li>
+        			<li><a href="https://frontendmasters.com/blog/bone-up-html-2025/">https://frontendmasters.com/blog/bone-up-html-2025/</a></li>
+        			<li><a href="https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/">https://www.topnotchdezigns.com/reasons-why-html5-is-the-future-even-now/</a></li>
+        			<li><a href="https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai">https://www.hi-interactive.com/blog/the-future-of-html-trends-tips-and-ai</a></li>
+        			<li><a href="https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest">https://wiki.whatwg.org/wiki/New_Features_Awaiting_Implementation_Interest</a></li>
+        			<li><a href="https://www.w3.org/People/Bos/DesignGuide/compatibility.html">https://www.w3.org/People/Bos/DesignGuide/compatibility.html</a>
+        			<li><a href="https://firstsiteguide.com/html-stats/">https://firstsiteguide.com/html-stats/</a></li>
+        			<li><a href="https://www.oyova.com/blog/html5-and-your-content-what-to-do/">https://www.oyova.com/blog/html5-and-your-content-what-to-do/</a></li>
+        			<li><a href="https://w3techs.com/technologies/details/ml-html5">https://w3techs.com/technologies/details/ml-html5</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="homepagetableofcontents">
+			<h4>Table of Contents</h4>
+				<a href="#" onclick="showLetter('Past and Present HTML'); return false;">Past and Present HTML</a>
+          		<a href="#" onclick="showLetter('Future HTML'); return false;">Future HTML</a>
+          		<a href="#" onclick="showLetter('References & Resources'); return false;">References & Resources</a>
+          		<a href="#" onclick="showLetter('Key Concepts'); return false;">Key Concepts</a>
+          		<a href="#" onclick="showLetter('About'); return false;">About</a>
+		</div>
+		`;
       }else if(page === 'Key Concepts') {
         content.innerHTML = `<h2 id="main-title">Key Concepts</h2><p>Content for Key Concepts here.</p>`;
       }else if(page === 'About') {
@@ -443,6 +595,7 @@
   </script>
 </body>
 </html>
+
 
 
 
