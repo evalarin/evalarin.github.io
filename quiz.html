@@ -224,7 +224,7 @@
   </header>
 
   <main>
-    <div id="quiz-title">HTML Self-Assessment Quiz</div>div>
+    <div id="quiz-title">HTML Self-Assessment Quiz</div>
     <p id="quiz-intro">
       Test what you learned about HTML's history, current use, and future direction.
       Answer all questions, then submit to see your score and feedback.
@@ -250,7 +250,7 @@
       </div>
 
       <div class="question" id="q3-block">
-        <h3>2. Multiple choice</h3>
+        <h3>3. Multiple choice</h3>
         <p>Which organization helps maintain and evolve modern HTML standards (the "living standard")?</p>
         <div class ="options">
           <label><input type="radio" name="q3" value="w3c" /> W3C only</label>
@@ -261,7 +261,7 @@
       </div>
 
       <div class="question" id="q4-block">
-        <h3>2. Multiple choice</h3>
+        <h3>4. Multiple choice</h3>
         <p>Which of the following best describes the role of CSS with HTML?</p>
         <div class ="options">
           <label><input type="radio" name="q4" value="structure" /> It defines the structure and meaning of content. </label>
@@ -272,18 +272,18 @@
       </div>
 
       <div class="question" id="q5-block">
-        <h3>2. Multiple choice</h3>
+        <h3>5. Multiple choice (Select all that apply)</h3>
         <p>Which of these are benefits that HTML5 brought compared to older versions? (Select <strong>all</strong> that apply.)</p>
         <div class ="options">
-          <label><input type="radio" name="q5" value="multimedia" /> Built-in audio/video support without plug-ins</label>
-          <label><input type="radio" name="q5" value="tables-only" /> Pages can only be built using table layouts</label>
-          <label><input type="radio" name="q5" value="mobile" /> Better support for mobile-friendly layouts</label>
-          <label><input type="radio" name="q5" value="offline" /> Features like offline storage and better APIs</label>
+          <label><input type="checkbox" name="q5" value="multimedia" /> Built-in audio/video support without plug-ins</label>
+          <label><input type="checkbox" name="q5" value="tables-only" /> Pages can only be built using table layouts</label>
+          <label><input type="checkbox" name="q5" value="mobile" /> Better support for mobile-friendly layouts</label>
+          <label><input type="checkbox" name="q5" value="offline" /> Features like offline storage and better APIs</label>
         </div>
         <div class="feedback" id="q5-feedback"></div>
       </div>
 
-      <div id="quiz-bottons">
+      <div id="quiz-buttons">
         <button type="submit" id="submit-btn"> Submit Quiz</button>
         <button type="button" id="reset-btn"> Reset Quiz</button>
       </div>
@@ -306,7 +306,7 @@
     const summaryBox = document.getElementById("summary");
 
     function setFeedback(id, correct, message) {
-      const el = document.getElemenetById(id);
+      const el = document.getElementById(id);
       el.textContent = message;
       el.classList.remove("correct","incorrect");
       el.classList.add(correct ? "correct" : "incorrect");
@@ -330,21 +330,17 @@
       clearFeedback();
 
       let score = 0;
-      const totalt = 5;
+      const total = 5;   // <-- use this later
 
       const q1 = document.getElementById("q1").value.trim().toLowerCase();
       const correctQ1a = "hyper text markup language";
       const correctQ1b = "hypertext markup language";
+
       if (q1 === correctQ1a || q1 === correctQ1b) {
         score++;
-        setFeedback("q1-feedback", true, "Correct! HTML = HyperText Markup Language.");
-      } else {
-        setFeedback(
-          "q1-feedback",
-          false,
-          "Incorrect. The correct answer is: HyperText Markup Language."
-          };
-    }
+          setFeedback("q1-feedback", true, "Correct! HTML = HyperText Markup Language.");
+      } else {setFeedback("q1-feedback",false,"Incorrect. The correct answer is: HyperText Markup Language.");
+}
 
     const q2 = document.querySelector('input[name="q2"]:checked');
     if (q2 && q2.value === "5"){
