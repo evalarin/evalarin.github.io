@@ -4,247 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Quiz - HTML; Where it Started and Where it is Going</title>
-
-  <style>
-    body {
-      background: #dde6f8;
-      color: black;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      text-align: center;
-    }
-    header {
-      padding: 0;
-      margin: 0;
-      position: relative;
-    }
-    #openingimage {
-      width: 100%;
-      height: 300px;
-      background-image: url(https://media.istockphoto.com/id/1460853312/photo/abstract-connected-dots-and-lines-concept-of-ai-technology-motion-of-digital-data-flow.webp?b=1&s=612x612&w=0&k=20&c=x0QPuKC83SPVcM7Wx364nTusL776cWWPL23U8HmlCfw=);
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #openingimagetitle {
-      font-size: 42px;
-      font-weight: bold;
-      color: #e7f3ff;
-      text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-      padding: 20px;
-    }
-    nav {
-      margin:20px 0;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    nav button {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      font-size: 12px;
-      padding: 10px;
-      color: black;
-      font-weight: bold;
-      background: linear-gradient(to right, #f6c0ff, #b0d7ff);
-      transition: 0.3s;
-    }
-    nav button:hover {
-      transform: scale(1.07);
-    }
-    #navbackground {
-      width: 100%;
-      background: transparent;
-      backdrop-filter: blur(4px);
-      padding: 20px 0;
-      display: flex;
-      justify-content: center;
-    }
-    main {
-      padding: 30px 5%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    #quiz-title {
-      font-family: "Courier New", monospace;
-      font-size: 40px;
-      font-weight: bold;
-      color: hotpink;
-      margin-bottom: 10px;
-    }
-    #quiz-intro {
-      max-width: 800px;
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
-    #quiz-form {
-      background: #d5e0f7;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 25px 30px 30px;
-      max-width: 900px;
-      width: 100%;
-      text-align: left;
-    }
-
-    .question {
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-    .question:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .question h3 {
-      font-size: 20px;
-      margin: 0 0 8px 0;
-    }
-    .question p {
-      margin: 0 0 10px 0;
-      font-size: 16px;
-    }
-
-    input[type="text"]{
-      width: 100%;
-      max-width: 400px;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid #b3bfd6;
-      font-size: 16px;
-    }
-
-    .options {
-      margin-left: 10px;
-    }
-    .options label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .feedback{
-      margin-top: 6px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .correct {
-      color: #0c7a2b;
-    }
-    .incorrect {
-      color: #b00020;
-    }
-    #quiz-buttons {
-      margin-top: 20px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    #quiz-buttons button {
-      padding: 10px 18px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    #submit-btn {
-      background: #4caf50;
-      color: #fff;
-    }
-    #reset-btn {
-      background: #f06292;
-      color: #fff;
-    }
-    #summary {
-      margin-top: 20px;
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      display: none;
-    }
-    #summary.pass {
-      background: #e1f5e5;
-      color: #0c7a2b;
-    }
-    #summary.fail {
-      background: #ffebee;
-      color: #b00020;
-    }
-    #homepagetableofcontents {
-      width: 100%;
-      background: #24334f;
-      border-top: 2px solid #182133;
-      padding: 10px 0 18px;
-      margin-top: 30px;
-      text-align: center;
-    }
-    #homepagetableofcontents h4 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #f4f7ff;
-      text-shadow: 0 0 6px rgba(255,255,255,0.6);
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    #homepagetableofcontents a {
-      margin: 0 12px;
-      display: inline-block;
-      font-size: 16px;
-      color: #fbe9ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    #homepagetableofcontents a:hover {
-      color: #c2185b;
-      text-decoration: underline;
-    }
-    #studentinfo {
-      background: #dde6f8;
-      padding: 15px 0 5px;
-      font-size: 20px;
-      font-weight: bold;
-      color: black;
-      text-align: center;
-      line-height: 1.4;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
   <div id="studentinfo">
     <p>Elena Valarino - Kennesaw State University</p>
     <p>IT 3203</p>
   </div>
+
   <header>
     <div id="openingimage">
       <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
     </div>
+
     <div id="navbackground">
       <nav>
-        <!-- On the quiz page, menu buttons link back to index.html -->
         <button onclick="window.location.href='index.html'">Homepage</button>
-        <button onclick="window.location.href='index.html'">Past and Present HTML</button>
-        <button onclick="window.location.href='index.html'">Future HTML</button>
-        <button onclick="window.location.href='index.html'">References &amp; Resources</button>
-        <button onclick="window.location.href='index.html'">Key Concepts</button>
+        <button onclick="window.location.href='past.html'">Past and Present HTML</button>
+        <button onclick="window.location.href='future.html'">Future HTML</button>
+        <button onclick="window.location.href='refs.html'">References & Resources</button>
+        <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
         <button onclick="window.location.href='quiz.html'">Quiz</button>
-        <button onclick="window.location.href='index.html'">About</button>
+        <button onclick="window.location.href='about.html'">About</button>
       </nav>
     </div>
   </header>
 
   <main>
     <div id="quiz-title">HTML Self-Assessment Quiz</div>
+
     <p id="quiz-intro">
       Test what you learned about HTML's history, current use, and future direction.
       Answer all questions, then submit to see your score and feedback.
@@ -261,51 +51,51 @@
       <div class="question" id="q2-block">
         <h3>2. Multiple choice</h3>
         <p>Which HTML version introduced strong support for built-in audio and video without plugins?</p>
-        <div class ="options">
-          <label><input type="radio" name="q2" value="1.0"/> HTML&nbsp;1.0</label>
-          <label><input type="radio" name="q2" value="4.01"/>HTML&nbsp;4.01</label>
-          <label><input type="radio" name="q2" value="5"/>HTML5</label>
+        <div class="options">
+          <label><input type="radio" name="q2" value="1.0">HTML 1.0</label>
+          <label><input type="radio" name="q2" value="4.01">HTML 4.01</label>
+          <label><input type="radio" name="q2" value="5">HTML5</label>
         </div>
         <div class="feedback" id="q2-feedback"></div>
       </div>
 
       <div class="question" id="q3-block">
         <h3>3. Multiple choice</h3>
-        <p>Which organization helps maintain and evolve modern HTML standards (the "living standard")?</p>
-        <div class ="options">
-          <label><input type="radio" name="q3" value="w3c" /> W3C only</label>
-          <label><input type="radio" name="q3" value="whatwg" /> WHATWG community</label>
-          <label><input type="radio" name="q3" value="ietf" /> IETF only</label>
+        <p>Which organization maintains the HTML living standard?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="w3c">W3C only</label>
+          <label><input type="radio" name="q3" value="whatwg">WHATWG community</label>
+          <label><input type="radio" name="q3" value="ietf">IETF only</label>
         </div>
         <div class="feedback" id="q3-feedback"></div>
       </div>
 
       <div class="question" id="q4-block">
         <h3>4. Multiple choice</h3>
-        <p>Which of the following best describes the role of CSS with HTML?</p>
-        <div class ="options">
-          <label><input type="radio" name="q4" value="structure" /> It defines the structure and meaning of content. </label>
-          <label><input type="radio" name="q4" value="style" /> It controls the visual style and layout of HTML pages. </label>
-          <label><input type="radio" name="q4" value="behaviour" /> It makes the web pages interactive and handles user events. </label>
+        <p>Which of the following best describes CSS?</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="structure">Defines structure & meaning</label>
+          <label><input type="radio" name="q4" value="style">Controls visual styles & layout</label>
+          <label><input type="radio" name="q4" value="behaviour">Adds interactive behavior</label>
         </div>
         <div class="feedback" id="q4-feedback"></div>
       </div>
 
       <div class="question" id="q5-block">
-        <h3>5. Multiple choice (Select all that apply)</h3>
-        <p>Which of these are benefits that HTML5 brought compared to older versions? (Select <strong>all</strong> that apply.)</p>
-        <div class ="options">
-          <label><input type="checkbox" name="q5" value="multimedia" /> Built-in audio/video support without plug-ins</label>
-          <label><input type="checkbox" name="q5" value="tables-only" /> Pages can only be built using table layouts</label>
-          <label><input type="checkbox" name="q5" value="mobile" /> Better support for mobile-friendly layouts</label>
-          <label><input type="checkbox" name="q5" value="offline" /> Features like offline storage and better APIs</label>
+        <h3>5. Select all that apply</h3>
+        <p>Which features did HTML5 improve?</p>
+        <div class="options">
+          <label><input type="checkbox" name="q5" value="multimedia">Built-in audio/video</label>
+          <label><input type="checkbox" name="q5" value="tables-only">Only table layouts</label>
+          <label><input type="checkbox" name="q5" value="mobile">Mobile layout improvements</label>
+          <label><input type="checkbox" name="q5" value="offline">Offline storage & APIs</label>
         </div>
         <div class="feedback" id="q5-feedback"></div>
       </div>
 
       <div id="quiz-buttons">
-        <button type="submit" id="submit-btn"> Submit Quiz</button>
-        <button type="button" id="reset-btn"> Reset Quiz</button>
+        <button id="submit-btn" type="submit">Submit Quiz</button>
+        <button id="reset-btn" type="button">Reset Quiz</button>
       </div>
 
       <div id="summary"></div>
@@ -313,104 +103,12 @@
 
     <div id="homepagetableofcontents">
       <h4>Table of Contents</h4>
-      <a href="index.html">Past and Present HTML</a>
-      <a href="index.html">Future HTML</a>
-      <a href="index.html">References &amp; Resources</a>
-      <a href="index.html">Key Concepts</a>
-      <a href="index.html">About</a>
+      <a href="past.html">Past and Present HTML</a>
+      <a href="future.html">Future HTML</a>
+      <a href="refs.html">References & Resources</a>
+      <a href="keyconcepts.html">Key Concepts</a>
+      <a href="about.html">About</a>
     </div>
   </main>
-
-  <script>
-    const form = document.getElementById("quiz-form");
-    const summaryBox = document.getElementById("summary");
-
-    function setFeedback(id, correct, message) {
-      const el = document.getElementById(id);
-      el.textContent = message;
-      el.classList.remove("correct","incorrect");
-      el.classList.add(correct ? "correct" : "incorrect");
-    }
-
-    function clearFeedback() {
-      ["q1","q2","q3","q4","q5"].forEach((q) => {
-        const el = document.getElementById(q + "-feedback");
-        if (el) {
-          el.textContent = "";
-          el.classList.remove("correct","incorrect");
-        }
-      });
-      summaryBox.style.display = "none";
-      summaryBox.textContent = "";
-      summaryBox.classList.remove("pass","fail");
-    }
-
-    form.addEventListener("submit",function (e) {
-      e.preventDefault();
-      clearFeedback();
-
-      let score = 0;
-      const total = 5;   // <-- use this later
-
-      const q1 = document.getElementById("q1").value.trim().toLowerCase();
-      const correctQ1a = "hyper text markup language";
-      const correctQ1b = "hypertext markup language";
-
-      if (q1 === correctQ1a || q1 === correctQ1b) {
-        score++;
-          setFeedback("q1-feedback", true, "Correct! HTML = HyperText Markup Language.");
-      } else {setFeedback("q1-feedback",false,"Incorrect. The correct answer is: HyperText Markup Language.");
-}
-
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    if (q2 && q2.value === "5"){
-      score++;
-      setFeedback("q2-feedback", true, "Correct = HTML5 added strong native multimedia support.");
-    } else {
-      setFeedback("q2-feedback", false, "Incorrect. The correct answer is HTML5.");
-    }
-    const q3 = document.querySelector('input[name="q3"]:checked');
-    if (q3 && q3.value === "whatwg"){
-      score++;
-      setFeedback("q3-feedback", true, "Correct – WHATWG maintains the HTML living standard.");
-    } else {
-      setFeedback("q3-feedback", false, "Incorrect. The correct answer is WHATWG.");
-    }
-
-    const q4 = document.querySelector('input[name="q4"]:checked');
-      if (q4 && q4.value === "style") {
-        score++;
-        setFeedback("q4-feedback", true, "Correct – CSS controls the style and layout.");
-      } else {
-        setFeedback(
-          "q4-feedback", false, "Incorrect. CSS is mainly for visual style and layout.");
-      }
-
-    const checked = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map((c) => c.value);
-      const correctSet = ["multimedia", "mobile", "offline"];
-      const isCorrectQ5 =
-        checked.length === correctSet.length &&
-        correctSet.every((val) => checked.includes(val));
-
-      if (isCorrectQ5) {
-        score++;
-        setFeedback("q5-feedback",true,"Correct – HTML5 improved multimedia, mobile support, and offline / API features.");
-      } else {
-        setFeedback("q5-feedback",false,"Incorrect. Correct options: multimedia, better mobile support, and offline/APIs.");
-      }
-    const percent = Math.round((score / total) * 100);
-    const pass = score >= 4;
-
-      summaryBox.style.display = "block";
-      summaryBox.classList.add(pass ? "pass" : "fail");
-      summaryBox.textContent =
-        (pass ? "Pass 🎉 " : "Fail 💡 ") +
-        `You scored ${score} / ${total} (${percent}%).`;
-    });
-
-    document.getElementById("reset-btn").addEventListener("click", function () {
-      form.reset();
-      clearFeedback();
-    });
-  </script>
 </body>
+</html>
