@@ -1,4 +1,4 @@
-/* GLOBAL -------------------------------------------------------*/
+
 body {
   background: #dde6f8;
   color: black;
@@ -17,7 +17,6 @@ body {
   line-height: 1.4;
 }
 
-/* HEADER -------------------------------------------------------*/
 header {
   padding: 0;
   margin: 0;
@@ -42,7 +41,6 @@ header {
   padding: 20px;
 }
 
-/* NAVIGATION ---------------------------------------------------*/
 #navbackground {
   width: 100%;
   background: transparent;
@@ -77,7 +75,6 @@ nav button:hover {
   transform: scale(1.07);
 }
 
-/* MAIN TITLE ---------------------------------------------------*/
 #hometitle, #main-title {
   font-family: "Courier New", monospace;
   font-size: 45px;
@@ -89,7 +86,6 @@ nav button:hover {
   width: 100%;
 }
 
-/* HOMEPAGE -----------------------------------------------------*/
 #homepage {
   display: flex;
   justify-content: space-between;
@@ -121,7 +117,6 @@ nav button:hover {
   text-align: left;
 }
 
-/* KEY TERMS BOX ------------------------------------------------*/
 #keyterms, #futurebox {
   width: 30%;
   background: #e8f0fa;
@@ -145,7 +140,6 @@ nav button:hover {
   line-height: 1.4;
 }
 
-/* PAST & PRESENT PAGE ------------------------------------------*/
 #pastpresent {
   display: flex;
   justify-content: space-between;
@@ -167,7 +161,6 @@ nav button:hover {
 
 #pasttablewrapper { width: 30%; }
 
-/* Past & Present table */
 #pasttable {
   width: 100%;
   border-collapse: collapse;
@@ -191,7 +184,6 @@ nav button:hover {
   background: rgba(255, 255, 255, 0.18);
 }
 
-/* FUTURE PAGE --------------------------------------------------*/
 #futurecontainer {
   display: flex;
   justify-content: space-between;
@@ -218,7 +210,6 @@ nav button:hover {
   color: hotpink;
 }
 
-/* TABLE OF CONTENTS -------------------------------------------*/
 #homepagetableofcontents {
   width: 100%;
   background: #24334f;
@@ -248,7 +239,6 @@ nav button:hover {
   text-decoration: underline;
 }
 
-/* QUIZ PAGE ----------------------------------------------------*/
 #quiz-title {
   font-family: "Courier New", monospace;
   font-size: 40px;
@@ -266,7 +256,6 @@ nav button:hover {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* RESPONSIVE FOR MILESTONE 3 ----------------------------------*/
 @media (max-width: 900px) {
   #homepage,
   #pastpresent,
