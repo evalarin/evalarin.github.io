@@ -125,6 +125,7 @@ nav button:hover {
   text-align: left;
   color: #1f2a3a;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-wrap: break-word;
 }
 
 #keyterms strong {
@@ -227,6 +228,7 @@ nav button:hover {
   font-size: 17px;
   color: #1f2a3a;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-wrap: break-word;
 }
 
 #futurebox strong, #refsbox strong {
@@ -236,6 +238,8 @@ nav button:hover {
 
 #refsbox a {
   color: #1f2a3a;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 #main-title {
@@ -274,4 +278,114 @@ nav button:hover {
   width: 90%;
   text-align: left;
   margin: 0 auto;
+}
+
+#quiz-title {
+  font-family: "Courier New", monospace;
+  font-size: 40px;
+  font-weight: bold;
+  color: hotpink;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#conceptsbox {
+  max-width: 800px;
+  background: #e8f0fa;
+  border: 2px solid #c3cfdd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+/* Medium mobile */
+@media (max-width: 768px) {
+
+  #homepage,
+  #pastpresent,
+  #futurecontainer,
+  #refscontainer {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  #homepageleft,
+  #pasttext,
+  #futureleft,
+  #refsleft,
+  #keyterms,
+  #futurebox,
+  #refsbox,
+  #pasttablewrapper {
+    width: 100%;
+  }
+
+  nav button {
+    width: 90px;
+    height: 90px;
+    font-size: 11px;
+  }
+
+  #openingimagetitle {
+    font-size: 32px;
+  }
+
+  #hometitle,
+  #main-title,
+  #quiz-title {
+    font-size: 32px;
+  }
+
+  #pasttable {
+    font-size: 13px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  #quiz-form {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  nav button {
+    width: 75px;
+    height: 75px;
+    font-size: 10px;
+  }
+
+  #openingimagetitle {
+    font-size: 26px;
+    padding: 10px;
+  }
+
+  #hometitle,
+  #main-title,
+  #quiz-title {
+    font-size: 26px;
+  }
+
+  #homepage,
+  #pastpresent,
+  #futurecontainer,
+  #refscontainer {
+    padding: 20px 3%;
+  }
+
+  #quiz-form {
+    padding: 15px;
+  }
+
+  .options label {
+    font-size: 15px;
+    display: block;
+    padding: 4px 0;
+  }
 }
