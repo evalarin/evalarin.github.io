@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Key Concepts</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div id="studentinfo">
-    <p>Elena Valarino - Kennesaw State University</p>
-    <p>IT 3203</p>
+
+<div id="studentinfo">
+  <p>Elena Valarino - Kennesaw State University</p>
+  <p>IT 3203</p>
+</div>
+
+<header>
+  <div id="openingimage">
+    <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
   </div>
 
-  <header>
-    <div id="openingimage">
-      <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
-    </div>
+  <div id="navbackground">
+    <nav>
+      <button onclick="location.href='homepage.html'">Homepage</button>
+      <button onclick="location.href='past.html'">Past & Present HTML</button>
+      <button onclick="location.href='future.html'">Future HTML</button>
+      <button onclick="location.href='references.html'">References</button>
+      <button onclick="location.href='keyconcepts.html'">Key Concepts</button>
+      <button onclick="location.href='quiz.html'">Quiz</button>
+      <button onclick="location.href='about.html'">About</button>
+    </nav>
+  </div>
+</header>
 
-    <div id="navbackground">
-      <nav>
-        <button onclick="window.location.href='index.html'">Homepage</button>
-        <button onclick="window.location.href='past.html'">Past and Present HTML</button>
-        <button onclick="window.location.href='future.html'">Future HTML</button>
-        <button onclick="window.location.href='refs.html'">References & Resources</button>
-        <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
-        <button onclick="window.location.href='quiz.html'">Quiz</button>
-        <button onclick="window.location.href='about.html'">About</button>
-      </nav>
-    </div>
-  </header>
+<div id="hometitle">Key Concepts</div>
 
-  <main>
-    <div id="hometitle">Key Concepts</div>
+<div id="keyconceptspage">
+  <h2 id="main-title">Key Concepts</h2>
 
-    <div id="homepage">
-      <div id="homepageleft">
-        <h3>Core Ideas</h3>
+  <p>Here are the most important HTML-related concepts:</p>
 
-        <p>HTML is the structural foundation of the web, using tags to describe content and create readable pages.</p>
-        <p>CSS expands HTML by adding styling, spacing, layout control, colors, and design.</p>
-        <p>JavaScript brings behavior, interactivity, and dynamic content to modern sites.</p>
-      </div>
+  <ul class="conceptlist">
+    <li><strong>Semantic HTML</strong> — using meaningful tags like &lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</li>
+    <li><strong>Responsive design</strong> — layouts that adjust to screen size</li>
+    <li><strong>CSS separation</strong> — structure (HTML) vs style (CSS)</li>
+    <li><strong>APIs</strong> — HTML5 APIs like Web Storage, Canvas, Geolocation</li>
+    <li><strong>Accessibility</strong> — using alt text, ARIA labels, readable structure</li>
+  </ul>
+</div>
 
-      <div id="keyterms">
-        <strong>Key Terms</strong>
-        <br><br>
-        <ul>
-          <li><strong>Elements:</strong> Building blocks of HTML pages</li>
-          <li><strong>Tags:</strong> Opening/closing markers defining structure</li>
-          <li><strong>Attributes:</strong> Extra information added to elements</li>
-          <li><strong>Semantic HTML:</strong> Tags with meaning (header, main, nav)</li>
-          <li><strong>API:</strong> Interfaces that allow apps to communicate</li>
-        </ul>
-      </div>
-    </div>
+<div id="homepagetableofcontents">
+  <h4>Table of Contents</h4>
+  <a href="past.html">Past and Present HTML</a>
+  <a href="future.html">Future HTML</a>
+  <a href="references.html">References & Resources</a>
+  <a href="keyconcepts.html">Key Concepts</a>
+  <a href="about.html">About</a>
+</div>
 
-    <div id="homepagetableofcontents">
-      <h4>Table of Contents</h4>
-      <a href="past.html">Past and Present HTML</a>
-      <a href="future.html">Future HTML</a>
-      <a href="refs.html">References & Resources</a>
-      <a href="keyconcepts.html">Key Concepts</a>
-      <a href="about.html">About</a>
-    </div>
-  </main>
 </body>
 </html>
