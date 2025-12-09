@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML; Where it Started and Where it is Going</title>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
 <body>
 
 <div id="studentinfo">
@@ -21,21 +22,68 @@
 
   <div id="navbackground">
     <nav>
-      <button onclick="location.href='index.html'">Homepage</button>
-      <button onclick="location.href='past.html'">Past and Present HTML</button>
-      <button onclick="location.href='future.html'">Future HTML</button>
-      <button onclick="location.href='refs.html'">References & Resources</button>
-      <button onclick="location.href='keyconcepts.html'">Key Concepts</button>
-      <button onclick="location.href='quiz.html'">Quiz</button>
-      <button onclick="location.href='about.html'">About</button>
+      <button onclick="window.location.href='index.html'">Homepage</button>
+      <button onclick="window.location.href='past.html'">Past and Present HTML</button>
+      <button onclick="window.location.href='future.html'">Future HTML</button>
+      <button onclick="window.location.href='references.html'">References & Resources</button>
+      <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
+      <button onclick="window.location.href='quiz.html'">Quiz</button>
+      <button onclick="window.location.href='about.html'">About</button>
     </nav>
   </div>
 </header>
 
-<h2 id="main-title">About</h2>
+<div id="hometitle">Homepage</div>
 
-<p>Elena Valarino, Undergraduate Student at Kennesaw State University...</p>
-<p>Please note this is for a class project <a href="https://ksuweb.github.io/IT3203/">Link to Class GitHub Here</a></p>
+<div id="homepage">
+  <div id="homepageleft">
+    <h3>Intro</h3>
+
+    <p>
+      The world wide web exists and functions because of the evolution and development of the HTML language. 
+      It is the foundation to everything we see online. HTML is an extremely pivotal part of how we view the 
+      internet, it has grown and adapted to meet the needs of new technology and expectations of the new 
+      generation of users.
+    </p>
+
+    <p>
+      HTML stands for hyper text markup language and is the basic standard language for creation of readable 
+      web pages on the world wide web. In short, HTML tells the browser how to display messages by labeling 
+      different components like “this is a paragraph” or “this is a heading”, it is the basic structure that 
+      can be built upon. The language breaks this down by placing what is being posted by using greater and 
+      lesser signs, i.e. &lt;body&gt; or &lt;title&gt;. Those bracketed words are called tags, and you can start 
+      a paragraph this way. The tag will be &lt;p&gt; (enter paragraph here) &lt;/p&gt; the p stands for paragraph 
+      and this is how you would create a paragraph like this on a basic web page.
+    </p>
+
+    <p>
+      A web browser will take that data and display the content on a web page but instead of seeing bracketed 
+      letters you would see the paragraph in between. A web page can be more than just letters and that is 
+      where CSS and JavaScript come into play. CSS stands for cascading style sheets and this is where you 
+      can bring in color, font and even spacing. JavaScript allows for interaction and behavior in a web page.
+    </p>
+
+  </div>
+
+  <div id="keyterms">
+    <strong>Key Terms</strong><br><br>
+    <ul>
+      <li><strong>HTML:</strong> hyper text markup language used for creating readable web pages.</li>
+      <li><strong>CSS:</strong> cascading style sheets used for design, styling, layout.</li>
+      <li><strong>JavaScript:</strong> adds behavior and interactivity to web pages.</li>
+      <li><strong>API:</strong> application programming interfaces used for communication between systems.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="homepagetableofcontents">
+  <h4>Table of Contents</h4>
+  <a href="past.html">Past and Present HTML</a>
+  <a href="future.html">Future HTML</a>
+  <a href="references.html">References & Resources</a>
+  <a href="keyconcepts.html">Key Concepts</a>
+  <a href="about.html">About</a>
+</div>
 
 </body>
 </html>
