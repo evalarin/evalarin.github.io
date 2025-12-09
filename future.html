@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Future HTML</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future HTML</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="studentinfo">
-  <p>Elena Valarino - Kennesaw State University</p>
-  <p>IT 3203</p>
-</div>
-
 <header>
+  <div id="topinfo">
+    Elena Valarino – Kennesaw State University<br>
+    IT 3203
+  </div>
+
   <div id="openingimage">
     <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
   </div>
 
   <div id="navbackground">
     <nav>
-      <button onclick="location.href='homepage.html'">Homepage</button>
-      <button onclick="location.href='past.html'">Past & Present HTML</button>
-      <button onclick="location.href='future.html'">Future HTML</button>
-      <button onclick="location.href='references.html'">References</button>
-      <button onclick="location.href='keyconcepts.html'">Key Concepts</button>
-      <button onclick="location.href='quiz.html'">Quiz</button>
-      <button onclick="location.href='about.html'">About</button>
+      <button onclick="window.location.href='homepage.html'">Homepage</button>
+      <button onclick="window.location.href='pastpresent.html'">Past & Present</button>
+      <button onclick="window.location.href='future.html'">Future HTML</button>
+      <button onclick="window.location.href='references.html'">References</button>
+      <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
+      <button onclick="window.location.href='quiz.html'">Quiz</button>
+      <button onclick="window.location.href='about.html'">About</button>
     </nav>
   </div>
 </header>
@@ -38,18 +37,38 @@
 <div id="futurecontainer">
 
   <div id="futureleft">
+
     <h3>Looking Ahead</h3>
-    <p>The world of technology is expanding and growing daily… (full content)…</p>
-    <p>WHATWG continues to develop new living standard features… (your full content)…</p>
+
+    <p>
+      The world of technology is expanding daily, and with it, the number of people creating and interacting with the web.
+      HTML will need to continue evolving to support more powerful tools, faster devices, and higher expectations.
+      Only recently has HTML5 become fully adopted, largely because of demands for improved connectivity, better performance,
+      more storage options, offline capabilities, and richer integration with other technologies.
+    </p>
+
+    <p>
+      The HTML living standard outlines many possible future enhancements. One example is improved image resizing capabilities,
+      allowing images to automatically adapt their pixel size across platforms. Artificial intelligence could also influence HTML’s future;
+      AI-assisted code generation may reduce the amount of manual HTML needed for responsive or media-heavy layouts.
+    </p>
+
+    <p>
+      There is an active group responsible for maintaining and proposing updates to HTML: WHATWG 
+      (Web Hypertext Application Technology Working Group). This community develops new ideas and helps bring them into the official standard.
+      As HTML continues evolving, one challenge may be maintaining backward compatibility with older devices that cannot update as quickly.
+      Developers will have to balance innovation with accessibility across all user devices.
+    </p>
+
   </div>
 
   <div id="futurebox">
     <strong>Future HTML Focus Areas</strong>
     <ul>
-      <li>More powerful multimedia and animation without plugins.</li>
-      <li>Better tools for accessibility & semantic structure.</li>
-      <li>Smarter responsive layouts for all devices.</li>
-      <li>Deeper integration with APIs, AI, and web apps.</li>
+      <li>More powerful multimedia and animation features without extra plugins</li>
+      <li>Better tools for accessibility and semantic structure</li>
+      <li>Smarter responsive layouts for phones, tablets, and desktops</li>
+      <li>Deeper integration with APIs, AI tools, and web applications</li>
     </ul>
   </div>
 
@@ -57,7 +76,7 @@
 
 <div id="homepagetableofcontents">
   <h4>Table of Contents</h4>
-  <a href="past.html">Past and Present HTML</a>
+  <a href="pastpresent.html">Past and Present HTML</a>
   <a href="future.html">Future HTML</a>
   <a href="references.html">References & Resources</a>
   <a href="keyconcepts.html">Key Concepts</a>
