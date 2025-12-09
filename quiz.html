@@ -1,114 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Quiz - HTML; Where it Started and Where it is Going</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Quiz</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="studentinfo">
-    <p>Elena Valarino - Kennesaw State University</p>
-    <p>IT 3203</p>
+
+<header>
+  <div id="topinfo">
+    Elena Valarino – Kennesaw State University<br>
+    IT 3203
   </div>
 
-  <header>
-    <div id="openingimage">
-      <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
+  <div id="openingimage">
+    <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
+  </div>
+
+  <div id="navbackground">
+    <nav>
+      <button onclick="window.location.href='homepage.html'">Homepage</button>
+      <button onclick="window.location.href='pastpresent.html'">Past & Present</button>
+      <button onclick="window.location.href='future.html'">Future HTML</button>
+      <button onclick="window.location.href='references.html'">References</button>
+      <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
+      <button onclick="window.location.href='quiz.html'">Quiz</button>
+      <button onclick="window.location.href='about.html'">About</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div id="quiz-title">HTML Self-Assessment Quiz</div>
+
+  <p id="quiz-intro">
+    Test what you learned about HTML's history, current use, and future direction.<br>
+    Answer all questions, then submit to see your score and feedback.
+  </p>
+
+  <form id="quiz-form">
+
+    <div class="question" id="q1-block">
+      <h3>1. Fill in the blank</h3>
+      <p>HTML stands for <em>_____________________________________</em></p>
+      <input type="text" id="q1">
+      <div class="feedback" id="q1-feedback"></div>
     </div>
 
-    <div id="navbackground">
-      <nav>
-        <button onclick="window.location.href='index.html'">Homepage</button>
-        <button onclick="window.location.href='past.html'">Past and Present HTML</button>
-        <button onclick="window.location.href='future.html'">Future HTML</button>
-        <button onclick="window.location.href='refs.html'">References & Resources</button>
-        <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
-        <button onclick="window.location.href='quiz.html'">Quiz</button>
-        <button onclick="window.location.href='about.html'">About</button>
-      </nav>
+    <div class="question" id="q2-block">
+      <h3>2. Multiple choice</h3>
+      <p>Which HTML version introduced strong support for built-in audio and video?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="1.0"> HTML 1.0</label>
+        <label><input type="radio" name="q2" value="4.01"> HTML 4.01</label>
+        <label><input type="radio" name="q2" value="5"> HTML5</label>
+      </div>
+      <div class="feedback" id="q2-feedback"></div>
     </div>
-  </header>
 
-  <main>
-    <div id="quiz-title">HTML Self-Assessment Quiz</div>
-
-    <p id="quiz-intro">
-      Test what you learned about HTML's history, current use, and future direction.
-      Answer all questions, then submit to see your score and feedback.
-    </p>
-
-    <form id="quiz-form">
-      <div class="question" id="q1-block">
-        <h3>1. Fill in the blank</h3>
-        <p>HTML stands for <em>_____________________________________</em></p>
-        <input type="text" id="q1"/>
-        <div class="feedback" id="q1-feedback"></div>
+    <div class="question" id="q3-block">
+      <h3>3. Multiple choice</h3>
+      <p>Which organization maintains the HTML living standard?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="w3c"> W3C only</label>
+        <label><input type="radio" name="q3" value="whatwg"> WHATWG community</label>
+        <label><input type="radio" name="q3" value="ietf"> IETF only</label>
       </div>
-
-      <div class="question" id="q2-block">
-        <h3>2. Multiple choice</h3>
-        <p>Which HTML version introduced strong support for built-in audio and video without plugins?</p>
-        <div class="options">
-          <label><input type="radio" name="q2" value="1.0">HTML 1.0</label>
-          <label><input type="radio" name="q2" value="4.01">HTML 4.01</label>
-          <label><input type="radio" name="q2" value="5">HTML5</label>
-        </div>
-        <div class="feedback" id="q2-feedback"></div>
-      </div>
-
-      <div class="question" id="q3-block">
-        <h3>3. Multiple choice</h3>
-        <p>Which organization maintains the HTML living standard?</p>
-        <div class="options">
-          <label><input type="radio" name="q3" value="w3c">W3C only</label>
-          <label><input type="radio" name="q3" value="whatwg">WHATWG community</label>
-          <label><input type="radio" name="q3" value="ietf">IETF only</label>
-        </div>
-        <div class="feedback" id="q3-feedback"></div>
-      </div>
-
-      <div class="question" id="q4-block">
-        <h3>4. Multiple choice</h3>
-        <p>Which of the following best describes CSS?</p>
-        <div class="options">
-          <label><input type="radio" name="q4" value="structure">Defines structure & meaning</label>
-          <label><input type="radio" name="q4" value="style">Controls visual styles & layout</label>
-          <label><input type="radio" name="q4" value="behaviour">Adds interactive behavior</label>
-        </div>
-        <div class="feedback" id="q4-feedback"></div>
-      </div>
-
-      <div class="question" id="q5-block">
-        <h3>5. Select all that apply</h3>
-        <p>Which features did HTML5 improve?</p>
-        <div class="options">
-          <label><input type="checkbox" name="q5" value="multimedia">Built-in audio/video</label>
-          <label><input type="checkbox" name="q5" value="tables-only">Only table layouts</label>
-          <label><input type="checkbox" name="q5" value="mobile">Mobile layout improvements</label>
-          <label><input type="checkbox" name="q5" value="offline">Offline storage & APIs</label>
-        </div>
-        <div class="feedback" id="q5-feedback"></div>
-      </div>
-
-      <div id="quiz-buttons">
-        <button id="submit-btn" type="submit">Submit Quiz</button>
-        <button id="reset-btn" type="button">Reset Quiz</button>
-      </div>
-
-      <div id="summary"></div>
-    </form>
-
-    <div id="homepagetableofcontents">
-      <h4>Table of Contents</h4>
-      <a href="past.html">Past and Present HTML</a>
-      <a href="future.html">Future HTML</a>
-      <a href="refs.html">References & Resources</a>
-      <a href="keyconcepts.html">Key Concepts</a>
-      <a href="about.html">About</a>
+      <div class="feedback" id="q3-feedback"></div>
     </div>
-  </main>
+
+    <div class="question" id="q4-block">
+      <h3>4. Multiple choice</h3>
+      <p>Which statement best describes the role of CSS?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="structure"> Defines the structure of content</label>
+        <label><input type="radio" name="q4" value="style"> Controls visual style and layout</label>
+        <label><input type="radio" name="q4" value="behaviour"> Adds interaction and behavior</label>
+      </div>
+      <div class="feedback" id="q4-feedback"></div>
+    </div>
+
+    <div class="question" id="q5-block">
+      <h3>5. Select all that apply</h3>
+      <p>Which benefits did HTML5 bring compared to older versions?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q5" value="multimedia"> Built-in audio/video support</label>
+        <label><input type="checkbox" name="q5" value="tables-only"> Pages can only use table layouts</label>
+        <label><input type="checkbox" name="q5" value="mobile"> Better mobile-friendly features</label>
+        <label><input type="checkbox" name="q5" value="offline"> Offline storage and improved APIs</label>
+      </div>
+      <div class="feedback" id="q5-feedback"></div>
+    </div>
+
+    <div style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+      <button type="submit" id="submit-btn">Submit Quiz</button>
+      <button type="button" id="reset-btn">Reset Quiz</button>
+    </div>
+
+    <div id="summary"></div>
+
+  </form>
+
+  <div id="homepagetableofcontents">
+    <h4>Table of Contents</h4>
+    <a href="pastpresent.html">Past and Present HTML</a>
+    <a href="future.html">Future HTML</a>
+    <a href="references.html">References & Resources</a>
+    <a href="keyconcepts.html">Key Concepts</a>
+    <a href="about.html">About</a>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
