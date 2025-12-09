@@ -44,7 +44,7 @@ nav {
   gap: 15px;
   flex-wrap: wrap;
 }
-
+/*rounded buttons for navigation*/
 nav button {
   width: 110px;
   height: 110px;
