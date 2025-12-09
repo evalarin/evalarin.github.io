@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Key Concepts</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-<div id="studentinfo">
-  <p>Elena Valarino - Kennesaw State University</p>
-  <p>IT 3203</p>
-</div>
-
-<header>
-  <div id="openingimage">
-    <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
+  <div id="studentinfo">
+    <p>Elena Valarino - Kennesaw State University</p>
+    <p>IT 3203</p>
   </div>
 
-  <div id="navbackground">
-    <nav>
-      <button onclick="location.href='index.html'">Homepage</button>
-      <button onclick="location.href='past.html'">Past and Present HTML</button>
-      <button onclick="location.href='future.html'">Future HTML</button>
-      <button onclick="location.href='refs.html'">References & Resources</button>
-      <button onclick="location.href='keyconcepts.html'">Key Concepts</button>
-      <button onclick="location.href='quiz.html'">Quiz</button>
-      <button onclick="location.href='about.html'">About</button>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div id="openingimage">
+      <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
+    </div>
 
-<h2 id="main-title">Key Concepts</h2>
+    <div id="navbackground">
+      <nav>
+        <button onclick="window.location.href='index.html'">Homepage</button>
+        <button onclick="window.location.href='past.html'">Past and Present HTML</button>
+        <button onclick="window.location.href='future.html'">Future HTML</button>
+        <button onclick="window.location.href='refs.html'">References & Resources</button>
+        <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
+        <button onclick="window.location.href='quiz.html'">Quiz</button>
+        <button onclick="window.location.href='about.html'">About</button>
+      </nav>
+    </div>
+  </header>
 
-<p>Content for Key Concepts here.</p>
+  <main>
+    <div id="hometitle">Key Concepts</div>
 
+    <div id="homepage">
+      <div id="homepageleft">
+        <h3>Core Ideas</h3>
+
+        <p>HTML is the structural foundation of the web, using tags to describe content and create readable pages.</p>
+        <p>CSS expands HTML by adding styling, spacing, layout control, colors, and design.</p>
+        <p>JavaScript brings behavior, interactivity, and dynamic content to modern sites.</p>
+      </div>
+
+      <div id="keyterms">
+        <strong>Key Terms</strong>
+        <br><br>
+        <ul>
+          <li><strong>Elements:</strong> Building blocks of HTML pages</li>
+          <li><strong>Tags:</strong> Opening/closing markers defining structure</li>
+          <li><strong>Attributes:</strong> Extra information added to elements</li>
+          <li><strong>Semantic HTML:</strong> Tags with meaning (header, main, nav)</li>
+          <li><strong>API:</strong> Interfaces that allow apps to communicate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="homepagetableofcontents">
+      <h4>Table of Contents</h4>
+      <a href="past.html">Past and Present HTML</a>
+      <a href="future.html">Future HTML</a>
+      <a href="refs.html">References & Resources</a>
+      <a href="keyconcepts.html">Key Concepts</a>
+      <a href="about.html">About</a>
+    </div>
+  </main>
 </body>
 </html>
-
