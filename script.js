@@ -71,7 +71,7 @@ form.addEventListener("submit", function(e) {
   } else {
     setFeedback("q5-feedback", false, "Incorrect. Correct options: multimedia, mobile support, offline/APIs.");
   }
-
+/*adds pass and fail results for quiz*/
   const percent = Math.round((score / total) * 100);
   const pass = score >= 4;
 
