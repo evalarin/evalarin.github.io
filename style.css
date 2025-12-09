@@ -1,1 +1,234 @@
+body {
+  background: #dde6f8;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+#studentinfo {
+  background: #dde6f8;
+  padding: 15px 0 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#openingimage {
+  width: 100%;
+  height: 300px;
+  background-image: url("https://media.istockphoto.com/id/1460853312/photo/abstract-connected-dots-and-lines-concept-of-ai-technology-motion-of-digital-data-flow.webp?b=1&s=612x612&w=0&k=20&c=x0QPuKC83SPVcM7Wx364nTusL776cWWPL23U8HmlCfw=");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#openingimagetitle {
+  font-size: 42px;
+  font-weight: bold;
+  color: #e7f3ff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+#navbackground {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav button {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  background: linear-gradient(to right, #f6c0ff, #b0d7ff);
+  transition: 0.3s;
+}
+
+nav button:hover {
+  transform: scale(1.08);
+}
+
+main {
+  padding: 30px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-family: "Courier New", monospace;
+  font-size: 38px;
+  font-weight: bold;
+  color: hotpink;
+  margin: 20px 0;
+}
+
+.page-text {
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td, th {
+  border: 1px solid #a8b3d1;
+  padding: 10px;
+  background: #e4eaff;
+}
+
+.reference-box {
+  width: 85%;
+  background: #d5e0f7;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.reference-box a {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+#quiz-form {
+  background: #d5e0f7;
+  border-radius: 12px;
+  padding: 25px 30px 30px;
+  max-width: 900px;
+  width: 100%;
+  text-align: left;
+}
+
+.question {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.options label {
+  display: block;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+#quiz-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#submit-btn {
+  padding: 10px 16px;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+}
+
+#reset-btn {
+  padding: 10px 16px;
+  background: #f06292;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+}
+
+.correct {
+  color: #0c7a2b;
+}
+
+.incorrect {
+  color: #b00020;
+}
+
+#homepagetableofcontents {
+  width: 100%;
+  background: #24334f;
+  padding: 15px 0;
+  margin-top: 40px;
+  text-align: center;
+  border-top: 2px solid #182133;
+}
+
+#homepagetableofcontents a {
+  color: #fbe9ff;
+  margin: 0 12px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#homepagetableofcontents a:hover {
+  color: #c2185b;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  nav button {
+    width: 95px;
+    height: 95px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav button {
+    width: 78px;
+    height: 78px;
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  #openingimage {
+    height: 180px;
+  }
+
+  #openingimagetitle {
+    font-size: 26px;
+  }
+
+  .page-text {
+    font-size: 16px;
+  }
+
+  #quiz-form {
+    padding: 20px;
+  }
+}
 
