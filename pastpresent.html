@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Past & Present HTML</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Past & Present HTML</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="studentinfo">
-  <p>Elena Valarino - Kennesaw State University</p>
-  <p>IT 3203</p>
-</div>
-
 <header>
+  <div id="topinfo">
+    Elena Valarino – Kennesaw State University<br>
+    IT 3203
+  </div>
+
   <div id="openingimage">
     <h1 id="openingimagetitle">HTML, Where it Started and Where it is Going</h1>
   </div>
 
   <div id="navbackground">
     <nav>
-      <button onclick="location.href='homepage.html'">Homepage</button>
-      <button onclick="location.href='pastpresent.html'">Past & Present HTML</button>
-      <button onclick="location.href='future.html'">Future HTML</button>
-      <button onclick="location.href='references.html'">References</button>
-      <button onclick="location.href='keyconcepts.html'">Key Concepts</button>
-      <button onclick="location.href='quiz.html'">Quiz</button>
-      <button onclick="location.href='about.html'">About</button>
+      <button onclick="window.location.href='homepage.html'">Homepage</button>
+      <button onclick="window.location.href='pastpresent.html'">Past & Present</button>
+      <button onclick="window.location.href='future.html'">Future HTML</button>
+      <button onclick="window.location.href='references.html'">References</button>
+      <button onclick="window.location.href='keyconcepts.html'">Key Concepts</button>
+      <button onclick="window.location.href='quiz.html'">Quiz</button>
+      <button onclick="window.location.href='about.html'">About</button>
     </nav>
   </div>
 </header>
@@ -38,20 +37,63 @@
 <div id="pastpresent">
 
   <div id="pasttext">
+
     <h3>Overview</h3>
-    <p>HTML was invented in 1991 by physicist Tim Berners-Lee… (full text from your project)…</p>
-    <p>Today’s web pages consist of complex applications… (your whole second paragraph)…</p>
+
+    <p>
+      HTML was invented in 1991 by physicist Sir Tim Berners-Lee. While created in 1991,
+      it was not released until 1993 and not fully published until 1995.
+      The earliest version, HTML 1.0, only included 18 tags and was primarily used by a small group of developers.
+      With growing interest, HTML 2.0 was released in 1995 and became the standard until 1997.
+    </p>
+
+    <p>
+      HTML 3.0 attempted to introduce more advanced features such as tables and improved formatting,
+      but technology at the time was not yet capable of supporting its heavier functionality.
+      HTML 4.01, released in 1999, became one of the most widely used versions.
+    </p>
+
+    <p>
+      In 2012, HTML5 was officially introduced. This version brought roughly 140 tags and major improvements,
+      including semantic elements and built-in multimedia support—eliminating the need for plugins like Adobe Flash.
+      HTML5 also improved compatibility with mobile devices, which became increasingly important as smartphones grew in popularity.
+    </p>
+
+    <p>
+      Today, APIs (application programming interfaces) help HTML-powered websites connect with external tools and services.
+      Users expect fast-loading pages, good accessibility, mobile responsiveness, and cross-browser reliability.
+      Tools such as WCAG, Lighthouse, WebPageTest, REST, and GraphQL support modern development workflows.
+    </p>
+
+    <p>
+      As of today, 95% of websites use HTML5 and 97.1% use HTML overall.
+      HTML remains the most dominant language on the web, with no indication of fading away—
+      instead, it continues evolving to support new technologies.
+    </p>
+
   </div>
 
   <div id="pasttablewrapper">
     <table id="pasttable">
       <thead>
-        <tr><th>HTML Version</th><th>Release Year</th></tr>
+        <tr>
+          <th>HTML Version</th>
+          <th>Release Year</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>HTML 1.0</td><td>1993</td></tr>
-        <tr><td>HTML 4.01</td><td>1999</td></tr>
-        <tr><td>HTML5</td><td>2012</td></tr>
+        <tr>
+          <td>HTML 1.0</td>
+          <td>1993</td>
+        </tr>
+        <tr>
+          <td>HTML 4.01</td>
+          <td>1999</td>
+        </tr>
+        <tr>
+          <td>HTML5</td>
+          <td>2012</td>
+        </tr>
       </tbody>
     </table>
   </div>
