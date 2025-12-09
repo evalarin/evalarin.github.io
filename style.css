@@ -1,3 +1,4 @@
+/* GLOBAL -------------------------------------------------------*/
 body {
   background: #dde6f8;
   color: black;
@@ -16,10 +17,16 @@ body {
   line-height: 1.4;
 }
 
+/* HEADER -------------------------------------------------------*/
+header {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
 #openingimage {
   width: 100%;
   height: 300px;
-  background-image: url("https://media.istockphoto.com/id/1460853312/photo/abstract-connected-dots-and-lines-concept-of-ai-technology-motion-of-digital-data-flow.webp?b=1&s=612x612&w=0&k=20&c=x0QPuKC83SPVcM7Wx364nTusL776cWWPL23U8HmlCfw=");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -31,15 +38,16 @@ body {
   font-size: 42px;
   font-weight: bold;
   color: #e7f3ff;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
   padding: 20px;
 }
 
+/* NAVIGATION ---------------------------------------------------*/
 #navbackground {
   width: 100%;
-  padding: 20px 0;
   background: transparent;
   backdrop-filter: blur(4px);
+  padding: 20px 0;
   display: flex;
   justify-content: center;
 }
@@ -47,13 +55,13 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 nav button {
-  width: 115px;
-  height: 115px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -66,58 +74,186 @@ nav button {
 }
 
 nav button:hover {
-  transform: scale(1.08);
+  transform: scale(1.07);
 }
 
-main {
-  padding: 30px 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.page-title {
+/* MAIN TITLE ---------------------------------------------------*/
+#hometitle, #main-title {
   font-family: "Courier New", monospace;
-  font-size: 38px;
+  font-size: 45px;
   font-weight: bold;
   color: hotpink;
-  margin: 20px 0;
-}
-
-.page-text {
-  max-width: 900px;
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: left;
-  margin-bottom: 30px;
-}
-
-table {
-  width: 90%;
-  border-collapse: collapse;
   margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }
 
-td, th {
-  border: 1px solid #a8b3d1;
-  padding: 10px;
-  background: #e4eaff;
-}
-
-.reference-box {
-  width: 85%;
+/* HOMEPAGE -----------------------------------------------------*/
+#homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   background: #d5e0f7;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: left;
-  margin-bottom: 30px;
+  padding: 40px 5%;
+  margin: 0 auto;
+  width: 90%;
+  gap: 30px;
 }
 
-.reference-box a {
+#homepageleft {
+  width: 65%;
+  text-align: left;
+}
+
+#homepageleft h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Courier New", monospace;
+  color: hotpink;
+}
+
+#homepageleft p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #333;
+  text-align: left;
+}
+
+/* KEY TERMS BOX ------------------------------------------------*/
+#keyterms, #futurebox {
+  width: 30%;
+  background: #e8f0fa;
+  border: 2px solid #c3cfdd;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 17px;
+  text-align: left;
+  color: #1f2a3a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#keyterms strong {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#keyterms ul li,
+#futurebox ul li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* PAST & PRESENT PAGE ------------------------------------------*/
+#pastpresent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #d5e0f7;
+  padding: 40px 5%;
+  margin: 0 auto;
+  width: 90%;
+  gap: 30px;
+}
+
+#pasttext {
+  width: 65%;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #333;
+}
+
+#pasttablewrapper { width: 30%; }
+
+/* Past & Present table */
+#pasttable {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#pasttable th, #pasttable td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#pasttable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#pasttable tbody tr:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* FUTURE PAGE --------------------------------------------------*/
+#futurecontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #d5e0f7;
+  padding: 40px 5%;
+  margin: 0 auto;
+  width: 90%;
+  gap: 30px;
+}
+
+#futureleft {
+  width: 65%;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #333;
+}
+
+#futureleft h3 {
+  font-size: 30px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  color: hotpink;
+}
+
+/* TABLE OF CONTENTS -------------------------------------------*/
+#homepagetableofcontents {
+  width: 100%;
+  background: #24334f;
+  border-top: 2px solid #182133;
+  padding: 10px 0 18px;
+  text-align: center;
+}
+
+#homepagetableofcontents h4 {
   font-size: 18px;
-  display: block;
-  margin-bottom: 8px;
-  word-wrap: break-word;
+  color: #f4f7ff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.6);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#homepagetableofcontents a {
+  margin: 0 12px;
+  font-size: 16px;
+  color: #fbe9ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#homepagetableofcontents a:hover {
+  color: #c2185b;
+  text-decoration: underline;
+}
+
+/* QUIZ PAGE ----------------------------------------------------*/
+#quiz-title {
+  font-family: "Courier New", monospace;
+  font-size: 40px;
+  font-weight: bold;
+  color: hotpink;
 }
 
 #quiz-form {
@@ -127,108 +263,45 @@ td, th {
   max-width: 900px;
   width: 100%;
   text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.question {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.options label {
-  display: block;
-  margin-bottom: 6px;
-  cursor: pointer;
-}
-
-#quiz-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-#submit-btn {
-  padding: 10px 16px;
-  background: #4caf50;
-  color: white;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-}
-
-#reset-btn {
-  padding: 10px 16px;
-  background: #f06292;
-  color: white;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-}
-
-.correct {
-  color: #0c7a2b;
-}
-
-.incorrect {
-  color: #b00020;
-}
-
-#homepagetableofcontents {
-  width: 100%;
-  background: #24334f;
-  padding: 15px 0;
-  margin-top: 40px;
-  text-align: center;
-  border-top: 2px solid #182133;
-}
-
-#homepagetableofcontents a {
-  color: #fbe9ff;
-  margin: 0 12px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-#homepagetableofcontents a:hover {
-  color: #c2185b;
-  text-decoration: underline;
-}
-
+/* RESPONSIVE FOR MILESTONE 3 ----------------------------------*/
 @media (max-width: 900px) {
+  #homepage,
+  #pastpresent,
+  #futurecontainer {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  #homepageleft,
+  #pasttext,
+  #futureleft,
+  #keyterms,
+  #futurebox,
+  #pasttablewrapper {
+    width: 100%;
+  }
+
   nav button {
-    width: 95px;
-    height: 95px;
-    font-size: 11px;
+    width: 85px;
+    height: 85px;
+    font-size: 10px;
   }
 }
 
 @media (max-width: 600px) {
-  nav {
-    gap: 10px;
+  #openingimage { height: 200px; }
+  #openingimagetitle { font-size: 28px; }
+
+  #hometitle, #main-title {
+    font-size: 32px;
   }
 
   nav button {
-    width: 78px;
-    height: 78px;
-    font-size: 10px;
-    padding: 5px;
-  }
-
-  #openingimage {
-    height: 180px;
-  }
-
-  #openingimagetitle {
-    font-size: 26px;
-  }
-
-  .page-text {
-    font-size: 16px;
-  }
-
-  #quiz-form {
-    padding: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 9px;
   }
 }
-
